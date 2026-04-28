@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2023",
+    "lib": ["ES2023", "DOM"],
+    "moduleDetection": "force",
+    "useDefineForClassFields": false,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "types": [
+      "vite/client",
+      "@digdir/designsystemet-web",
+      "@digdir/designsystemet-types",
+      "@digdir/designsystemet-css/theme"
+    ],
+    "allowImportingTsExtensions": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmit": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+    "skipLibCheck": true
+  },
+  "include": [".storybook/**/*", "stories/**/*", "vitest.config.ts", "vitest.shims.d.ts", "../../packages/regjeringen-components/src/typography/heading/Heading.ts", "../../packages/regjeringen-components/src/typography/paragraph/Paragraph.ts", "../../packages/regjeringen-components/src/organisms/page/Page.ts", "../../packages/regjeringen-components/src/atoms/card/Card.ts"]
+}

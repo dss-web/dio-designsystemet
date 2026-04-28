@@ -1,0 +1,22 @@
+{
+  "name": "design",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
+  "scripts": {
+    "dev": "pnpm --filter @design/storybook storybook",
+    "build-storybook": "pnpm --filter @design/storybook build-storybook",
+    "lint": "eslint --fix",
+    "test": "pnpm --filter @design/storybook test",
+    "tokens:create": "pnpm --filter @dss-web/regjeringen-tokens create-tokens",
+    "tokens:build": "pnpm --filter @dss-web/regjeringen-tokens build-tokens",
+    "tokens": "pnpm tokens:create && pnpm tokens:build"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^8.2.0",
+    "eslint": "^10.2.0",
+    "eslint-plugin-format": "^2.0.1",
+    "typescript": "~6.0.3"
+  }
+}

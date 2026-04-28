@@ -1,0 +1,31 @@
+{
+  "name": "@design/storybook",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@dss-web/regjeringen-components": "workspace:*",
+    "@dss-web/regjeringen-tokens": "workspace:*",
+    "lit": "^3.3.2"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^5.1.2",
+    "@digdir/designsystemet-types": "^1.13.2",
+    "@storybook/addon-a11y": "^10.3.5",
+    "@storybook/addon-docs": "^10.3.5",
+    "@storybook/addon-vitest": "^10.3.5",
+    "@storybook/web-components-vite": "^10.3.5",
+    "@vitest/browser-playwright": "^4.1.5",
+    "@vitest/coverage-v8": "^4.1.5",
+    "playwright": "^1.59.1",
+    "storybook": "^10.3.5",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.9",
+    "vitest": "^4.1.5"
+  }
+}

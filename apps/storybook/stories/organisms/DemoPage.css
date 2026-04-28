@@ -1,0 +1,80 @@
+.demo-page {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.demo-page__header {
+  margin-bottom: 2rem;
+}
+
+.demo-page__scheme-toggle {
+  margin-top: 1rem;
+}
+
+.demo-page__section {
+  margin-bottom: 2.5rem;
+}
+
+.demo-page__section > h2.ds-heading {
+  margin-bottom: 0.35rem;
+}
+
+.demo-page__section > h3.ds-heading {
+  margin: 1.25rem 0 0.5rem;
+}
+
+.demo-page__swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.demo-page__swatch {
+  min-width: 5.25rem;
+  min-height: 3.25rem;
+  padding: 0.5rem;
+  border-radius: var(--ds-border-radius-md, 0.5rem);
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+
+.demo-page__swatch span {
+  font-size: 0.6875rem;
+  line-height: 1.2;
+  padding: 0.125rem 0.35rem;
+  border-radius: 0.25rem;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1a1a1a;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.demo-page__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.demo-page__typography-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+
+.demo-page__alerts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 42rem;
+}
+
+.demo-page__footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ds-color-neutral-border-subtle);
+}
