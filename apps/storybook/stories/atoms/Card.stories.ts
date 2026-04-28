@@ -61,11 +61,11 @@ export const Medium: Story = {
 
 export const Large: Story = {
   args: {
-    color: '#ff0000',
+    color: 'support-1',
     variant: 'tinted',
     size: 'lg',
-    heading: 'Custom Color Card',
-    body: 'Custom Color Card Body',
-    footer: 'Custom Color Card Footer',
+    heading: 'Support 1 Card',
+    body: 'Support 1 Card Body',
+    footer: 'Support 1 Card Footer',
   },
 }
