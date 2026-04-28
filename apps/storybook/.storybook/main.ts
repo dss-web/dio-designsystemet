@@ -2,6 +2,7 @@ import type { StorybookConfig } from '@storybook/web-components-vite'
 import { mergeConfig } from 'vite'
 
 const config: StorybookConfig = {
+  staticDirs: ['../public'],
   stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
     '@chromatic-com/storybook',
