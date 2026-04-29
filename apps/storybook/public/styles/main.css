@@ -103,3 +103,14 @@ body {
     sans-serif;
   font-feature-settings: 'cv05' 1;
 }
+
+[data-size='auto'] {
+  --ds-size: var(--ds-size--sm);
+
+  @media (min-width: 600px) {
+    --ds-size: var(--ds-size--md);
+  }
+  @media (min-width: 992px) {
+    --ds-size: var(--ds-size--lg);
+  }
+}
