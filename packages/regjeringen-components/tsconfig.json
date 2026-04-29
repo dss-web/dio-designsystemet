@@ -17,5 +17,5 @@
     "erasableSyntaxOnly": true,
     "skipLibCheck": true
   },
-  "include": ["src", "src/atoms/alert/Alert.ts", "src/atoms/button/Button.ts", "src/atoms/card/Card.ts", "src/typography/heading/Heading.ts", "src/typography/paragraph/Paragraph.ts", "src/organisms/page/Page.ts"]
+  "include": ["src"]
 }

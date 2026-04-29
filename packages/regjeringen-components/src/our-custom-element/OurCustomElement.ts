@@ -7,7 +7,7 @@ import { customElement, property } from 'lit/decorators.js'
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement('our-custom-element')
+@customElement('dio-our-custom-element')
 export class OurCustomElement extends LitElement {
   /**
    * The number of times the button has been clicked.
@@ -348,6 +348,6 @@ export class OurCustomElement extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'our-custom-element': OurCustomElement
+    'dio-our-custom-element': OurCustomElement
   }
 }

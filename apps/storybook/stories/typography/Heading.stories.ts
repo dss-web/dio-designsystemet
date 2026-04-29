@@ -1,16 +1,18 @@
-import type { HeadingProps } from '@dss-web/regjeringen-components'
 import type { Meta, StoryObj } from '@storybook/web-components-vite'
-import { Heading } from '@dss-web/regjeringen-components'
+import type { HeadingProps } from './Heading'
+import { Heading } from './Heading'
 
 const meta = {
   title: 'Typography/Heading',
   tags: ['autodocs'],
   render: args => Heading(args),
+  args: {
+    size: 'md',
+  },
   argTypes: {
     size: {
       control: { type: 'select' },
       options: ['2xl', 'xl', 'lg', 'md', 'sm', 'xs', '2xs'],
-      defaultValue: 'md',
     },
     text: { control: 'text' },
   },

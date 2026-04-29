@@ -1,16 +1,18 @@
-import type { AlertProps } from '@dss-web/regjeringen-components'
 import type { Meta, StoryObj } from '@storybook/web-components-vite'
-import { Alert } from '@dss-web/regjeringen-components'
+import type { AlertProps } from './Alert'
+import { Alert } from './Alert'
 
 const meta = {
-  title: 'Atoms/Alert',
+  title: 'Components/Alert',
   tags: ['autodocs'],
   render: args => Alert(args),
+  args: {
+    color: 'info',
+  },
   argTypes: {
     color: {
       control: { type: 'select' },
       options: ['info', 'success', 'warning', 'danger'],
-      defaultValue: 'info',
     },
     text: { control: 'text' },
   },

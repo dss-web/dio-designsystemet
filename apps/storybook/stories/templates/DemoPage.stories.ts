@@ -11,7 +11,7 @@ function toggleScheme() {
 }
 
 const meta = {
-  title: 'Organisms/Demo page',
+  title: 'Templates/Demo page',
   render: () => html`
     <div class="demo-page">
       <header class="demo-page__header">

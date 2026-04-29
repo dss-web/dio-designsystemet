@@ -1,16 +1,18 @@
-import type { ParagraphProps } from '@dss-web/regjeringen-components'
 import type { Meta, StoryObj } from '@storybook/web-components-vite'
-import { Paragraph } from '@dss-web/regjeringen-components'
+import type { ParagraphProps } from './Paragraph'
+import { Paragraph } from './Paragraph'
 
 const meta = {
   title: 'Typography/Paragraph',
   tags: ['autodocs'],
   render: args => Paragraph(args),
+  args: {
+    size: 'md',
+  },
   argTypes: {
     size: {
       control: { type: 'select' },
       options: ['xl', 'lg', 'md', 'sm', 'xs'],
-      defaultValue: 'md',
     },
     text: { control: 'text' },
   },

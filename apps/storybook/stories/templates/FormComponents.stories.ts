@@ -4,7 +4,7 @@ import { html } from 'lit'
 import './FormComponents.css'
 
 const meta = {
-  title: 'Molecules/Form Components',
+  title: 'Templates/Form Components',
   tags: ['autodocs'],
   render: () => html`
     <div class="demo-form">

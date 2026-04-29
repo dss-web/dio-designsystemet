@@ -8,13 +8,13 @@ interface OurCustomElementArgs {
 }
 
 const meta = {
-  title: 'Atoms/Our custom element',
+  title: 'Components/Our custom element',
   tags: ['autodocs'],
-  component: 'our-custom-element',
+  component: 'dio-our-custom-element',
   render: (args: OurCustomElementArgs) => html`
-    <our-custom-element .count=${args.count}>
+    <dio-our-custom-element .count=${args.count}>
       <h1>Regjeringen design system</h1>
-    </our-custom-element>
+    </dio-our-custom-element>
   `,
   argTypes: {
     count: { control: { type: 'number', min: 0, step: 1 } },

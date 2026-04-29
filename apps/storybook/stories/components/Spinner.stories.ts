@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/web-components-vite'
 import { html } from 'lit'
 
 const meta = {
-  title: 'Atoms/Spinner',
+  title: 'Components/Spinner',
   tags: ['autodocs'],
   render: () => html`
     <svg

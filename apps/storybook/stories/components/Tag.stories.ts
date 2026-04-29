@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/web-components-vite'
 import { html } from 'lit'
 
 const meta = {
-  title: 'Atoms/Tag',
+  title: 'Components/Tag',
   tags: ['autodocs'],
   render: () => html`
     <span class="ds-tag" data-color="accent">Accent</span>

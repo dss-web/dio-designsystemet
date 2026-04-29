@@ -1,25 +1,28 @@
-import type { ButtonProps } from '@dss-web/regjeringen-components'
-
 import type { Meta, StoryObj } from '@storybook/web-components-vite'
-import { Button } from '@dss-web/regjeringen-components'
+import type { ButtonProps } from './Button'
+import { Button } from './Button'
 
 const meta = {
-  title: 'Atoms/Button',
+  title: 'Components/Button',
   tags: ['autodocs'],
   render: args => Button(args),
+  args: {
+    variant: 'primary',
+    color: 'accent',
+    disabled: false,
+    loading: false,
+  },
   argTypes: {
     variant: {
       control: { type: 'select' },
       options: ['primary', 'secondary', 'tertiary'],
-      defaultValue: 'primary',
     },
     color: {
       control: { type: 'select' },
       options: ['accent', 'regjeringsbla', 'neutral', 'support-1', 'support-2', 'support-3'],
-      defaultValue: 'accent',
     },
-    disabled: { control: 'boolean', defaultValue: false },
-    loading: { control: 'boolean', defaultValue: false },
+    disabled: { control: 'boolean' },
+    loading: { control: 'boolean' },
     text: { control: 'text' },
   },
 } satisfies Meta<ButtonProps>

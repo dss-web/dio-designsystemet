@@ -1,18 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite'
 import { html } from 'lit'
 
-import '@dss-web/regjeringen-components/register'
-
 const meta = {
-  title: 'Atoms/Our web component',
+  title: 'Components/Divider',
   tags: ['autodocs'],
-  component: 'our-web-component',
   render: () => html`
-    <our-web-component></our-web-component>
+    <p class="ds-paragraph" data-size="sm">A simple horizontal rule.</p>
+    <hr class="ds-divider" />
+    <p class="ds-paragraph" data-size="sm">Content below the divider.</p>
   `,
-  parameters: {
-    layout: 'fullscreen',
-  },
 } satisfies Meta
 
 export default meta
