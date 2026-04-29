@@ -3,19 +3,29 @@ import { html } from 'lit'
 
 import '@dss-web/regjeringen-components/register'
 
+interface CookieClickerArgs {
+  initialCount: number
+}
+
 const meta = {
   title: 'Components/CookieClicker',
-  tags: ['autodocs'],
   component: 'dio-cookie-clicker',
-  render: () => html`
-  <dio-cookie-clicker>
+  render: (args: CookieClickerArgs) => html`
+  <dio-cookie-clicker data-initial-count=${args.initialCount}>
     <button class="ds-button">Click me</button>
   </dio-cookie-clicker>
   `,
-} satisfies Meta<typeof html>
+  argTypes: {
+    initialCount: { control: 'number' },
+  },
+} satisfies Meta<CookieClickerArgs>
 
 export default meta
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<CookieClickerArgs>
 
-export const Default: Story = {}
+export const Default: Story = {
+  args: {
+    initialCount: 0,
+  },
+}

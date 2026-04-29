@@ -1,6 +1,20 @@
+export interface CookieClickerProps {
+  initialCount: number
+}
+
 export class CookieClicker extends HTMLElement {
-  private count = 0
+  private count: number
   private buttonEl: HTMLButtonElement | null = null
+
+  static observedAttributes = ['data-initial-count']
+  attributeChangedCallback(name: string, _oldValue: string | null, newValue: string | null) {
+    switch (name) {
+      case 'data-initial-count':
+        this.count = Number.parseInt(newValue || '0')
+        this.render()
+        break
+    }
+  }
 
   connectedCallback() {
     this.buttonEl = this.querySelector('button')

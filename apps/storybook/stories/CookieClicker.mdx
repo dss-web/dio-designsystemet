@@ -1,0 +1,21 @@
+import { Canvas, Meta, Controls, Story } from '@storybook/addon-docs/blocks';
+import * as CookieClickerStories from './components/CookieClicker.stories';
+ 
+<Meta of={CookieClickerStories} />
+ 
+# CookieClicker
+ 
+A cookie clicker is a clickable interactive element that counts the number of clicks.
+ 
+<Canvas of={CookieClickerStories.Default} withToolbar />
+<Controls of={CookieClickerStories.Default} />   
+
+# Usage
+
+CookieClicker is designed to wrap any button you like and update its text content to the number of clicks:
+
+```html
+<dio-cookie-clicker data-initial-count="0">
+  <button class="ds-button">Click me</button>
+</dio-cookie-clicker>
+```
