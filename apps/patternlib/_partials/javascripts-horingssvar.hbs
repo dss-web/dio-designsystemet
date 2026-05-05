@@ -1,0 +1,15 @@
+<script src="/Static/js/vendor/jquery-3.5.1.min.js"></script>
+<script src="/Static/js/vendor/jquery.afterresize.min.js"></script>
+<script src="/Static/js/vendor/jquery.ba-dotimeout.js"></script>
+<script src="/Static/js/vendor/fastclick.js"></script>
+<script src="/Static/js/main.js"></script>
+<script>
+	$(function() {
+		$('.alert-dismissible [data-dismiss="alert"]').on('click', function(e) {
+			var $alert = $(this).parent();
+			$alert.fadeOut('slow', function() {
+				$alert.remove();
+			});
+		});
+	});
+</script>

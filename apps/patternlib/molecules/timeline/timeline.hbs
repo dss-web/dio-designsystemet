@@ -1,0 +1,47 @@
+<div class="timeline-wrapper">
+	<div class="timeline-inner-wrapper">
+		<button type="button" class="btn btn-cta btn-no-icon btn-timeline-reverse" data-initial-text="Vis nyeste først" data-reversed-text="Vis eldste først" data-toggle-reverse-timeline><span>Vis nyeste først</span></button>
+		<button type="button" class="btn btn-cta btn-no-icon btn-timeline-expand-all" data-initial-text="Åpne alle" data-active-text="Lukk alle" data-toggle-all-years><span>Åpne alle</span></button>
+
+		<ul class="timeline{{#if class}} {{class}}{{/if}}">
+			{{#each years}}
+			<li>
+				<h2 class="timeline-year">
+					<span class="year">{{year}}</span>
+				</h2>
+
+				<ul>
+					{{#each items}}
+					<li class="timeline-event">
+						<div class="btn btn-timeline-event" data-toggle-event="#{{id}}">
+							<span class="timeline-date" aria-hidden="true">
+								<span class="timeline-startdate">{{startdate}}{{#if enddate}} &mdash;{{/if}}</span>
+								{{#if enddate}}<span class="timeline-enddate">{{enddate}}</span>{{/if}}
+							</span>
+							<h3 class="timeline-headline">
+								<span>{{{headline}}}</span>
+								<span class="visuallyhidden">({{startdate}}{{#if enddate}} til {{enddate}}{{/if}})</span>
+							</h3>
+							<button type="button" class="visuallyhidden" data-toggle-event="#{{id}}" aria-controls="{{id}}" aria-expanded="false">{{{headline}}}</button>
+						</div>
+						<div id="{{id}}" class="timeline-content article-content" data-timeline-content>
+							<div class="timeline-content-inner">
+								{{#if img-src}}<div class="timeline-asset" 
+									data-src="{{img-src}}" 
+									data-alt="{{{img-alt}}}" 
+									data-caption="{{{img-caption}}}" 
+									data-credits="{{{img-credit}}}">
+								</div>{{/if}}
+								<div class="timeline-text">
+									{{{text}}}
+								</div>
+							</div>
+						</div>
+					</li>
+					{{/each}}
+				</ul>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>

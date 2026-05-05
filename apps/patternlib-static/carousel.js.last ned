@@ -1,0 +1,304 @@
+
+/* global Modernizr */
+
+$.fn.carousel = function(id) {
+	var $cid = $('[data-carousel-id="' + id + '"]');
+	$cid.addClass('is-visible');
+
+	var $carousel = $cid.find('[data-carousel]'),
+		$sliderList = $cid.find('[data-carousel] > ul'),
+		$next = $cid.find('[data-carousel-next]'),
+		$prev = $cid.find('[data-carousel-prev]'),
+		$infoPos;
+
+	if ($sliderList) {
+		var isPortrait = $cid.data('carousel-wrapper') === 'portrait',
+			increment = isPortrait ? 136 : 205,// = item width
+			elems = $sliderList.children(),// = items
+			numElems = elems.length,// = number of items
+			shownInViewport = Math.round($cid.width() / increment) + 5,
+			firstInCarousel = 1,
+			isAnimating = false,
+			i,
+			nuffElems = (function() {
+				return (increment * numElems > ($cid.children('[data-carousel]').width() - 30));
+			});
+
+		if (!nuffElems()) {
+			$carousel.addClass('no-carousel');
+
+			$next.attr('disabled','disabled');
+			$prev.attr('disabled','disabled');
+
+			$sliderList.css({
+				'width': increment * numElems + 100 + 'px',
+				'margin-left': '24px'//-6px
+			});
+		}
+		else {//if (nuffElems()) {
+			$sliderList.css('width', (((numElems * 3) * increment) + 10) + 'px');
+
+			var $sliderListHtml = $sliderList.html();
+			$sliderList.append($sliderListHtml).append($sliderListHtml);
+			$sliderList.find('li:nth-child(n+' + (numElems * 2 + 1) + ')').attr('data-slider-ghost', '');
+		}
+
+		var prevItem = function () {
+			if (firstInCarousel === 1) {
+				$sliderList.css('left', '-' + numElems * increment + 'px');
+				firstInCarousel = numElems;
+			} else {
+				firstInCarousel--;
+			}
+
+			$sliderList.find('.initiator').removeAttr('class');
+			$cid.find('[data-carousel-item="' + firstInCarousel + '"]').addClass('initiator');
+
+			$sliderList.animate(
+				{ left: '+=' + increment },
+				{ duration: 400, easing: 'swing', queue: true,
+				complete: function () { isAnimating = false; }
+				}
+			);
+		};
+
+		$prev
+			.on('click', function() {
+				if (!isAnimating) {
+					isAnimating = true;
+					prevItem();
+					updateInfo();
+				}
+			})
+			.on('keyup', function() {
+				var $this = $(this),
+					$info = $this.siblings('[data-carousel-info]'),
+					$h = $info.outerHeight(),
+					$vpos = $info.position().top + $h,
+					$r = ($('body').scrollTop() + $(window).height()) < ($info.offset().top + $h - 20);
+				if ($r) {
+					$('html, body').animate({
+						scrollTop: $this.offset().top
+					}, 1000);
+					$infoPos = $vpos;
+				}
+			});
+
+		var nextItem = function(steps, ghost) {
+			$sliderList.find('.initiator').removeAttr('class');
+
+			var animIncrement = increment * steps,
+				cssLeft = $sliderList.css('left');
+
+			if (firstInCarousel === numElems) {
+				firstInCarousel = firstInCarousel + steps - numElems;
+			}
+			else if (cssLeft.substr(1,cssLeft.length - 3) > (numElems - 1) * increment) {
+				if (firstInCarousel === 1) {
+					firstInCarousel = 1 + steps;
+					$sliderList.css('left', '0px');
+				}
+				else {
+					firstInCarousel = firstInCarousel + steps;
+					if (ghost) {
+						$sliderList.css('left', '-' + (Number(cssLeft.substr(1,cssLeft.length - 3)) - Number(increment * numElems)) + 'px');
+						if (firstInCarousel > numElems) {
+							firstInCarousel = firstInCarousel - numElems;
+						}
+					}
+					else {
+						$sliderList.css('left', '-' + (cssLeft.substr(1,cssLeft.length - 3) - (increment * numElems)) + 'px');
+					}
+				}
+				animIncrement = increment * steps;
+			}
+			else {
+				firstInCarousel = firstInCarousel + steps > numElems ? firstInCarousel + steps - numElems : firstInCarousel + steps;
+			}
+			$cid.find('[data-carousel-item="' + firstInCarousel + '"]').addClass('initiator');
+
+			$sliderList.animate({
+				left: '-=' + animIncrement,
+				y: 0,
+				queue: true
+			}, 400, 'swing', function() {
+				isAnimating = false;
+			});
+		};
+
+		$next
+			.on('click', function() {
+				if (!isAnimating) {
+					isAnimating = true;
+					nextItem(1);
+					updateInfo();
+				}
+			})
+			.on('keyup', function() {
+				var $this = $(this),
+					$info = $this.siblings('[data-carousel-info]'),
+					$h = $info.outerHeight(),
+					$vpos = $info.position().top + $h,
+					$r = ($('body').scrollTop() + $(window).height()) < ($info.offset().top + $h - 20);
+				if ($r) {
+					$('html, body').animate({
+						scrollTop: $this.offset().top
+					}, 1000);
+					$infoPos = $vpos;
+				}
+			});
+
+		var updateInfo = function() {
+			if (!$(this).parent().prev().hasClass('initiator')) {
+				var $info = $cid.find('[data-carousel-info-content]');
+				$info.addClass('is-hidden');
+				$info.empty().html($cid.find('.initiator + li .info').html());
+				$info.removeClass('is-hidden');
+			}
+		};
+
+		$cid.find('[data-carousel-image]').on('click', function() {
+			if (!isAnimating) {
+				var $img = $(this);
+
+				if (!$img.parent().prev().hasClass('initiator')) {
+					var $info = $cid.find('[data-carousel-info-content]');
+					$info.addClass('is-hidden');
+					$info.empty().html($img.next('.info').html());
+					$info.removeClass('is-hidden');
+				}
+
+				if (nuffElems()) {//increment * numElems > ($cid.children('[data-carousel]').width() - 30)
+					// if (!Modernizr.touch || (Modernizr.touch && $(window).width() >= 700)) {
+						if ($img.parent().hasClass('initiator')) {
+							prevItem();
+						}
+						else if (!$img.parent().prev().hasClass('initiator')) {
+							var initiatorItem = $cid.find('[data-carousel-item].initiator').data('carousel-item'),
+								newItem = $img.parent().data('carousel-item') - 1,
+								steps = initiatorItem > newItem ? (numElems - initiatorItem + newItem) : newItem - initiatorItem;
+
+							if ($img.parent().data('slider-ghost') !== undefined) {
+								nextItem(steps,true);
+							}
+							else {
+								nextItem(steps);
+							}
+						}
+					// }
+				}
+				else {
+					isAnimating = true;
+
+					$cid.find('.current').removeClass('current');
+					$img.parent().addClass('current');
+					$cid.find('[data-carousel-info-pointer]').css('left', ($cid.find('[data-carousel] ul .current').position().left + (isPortrait ? ($(window).width() >= 700 ? 70 : 40) : 80)));
+
+					isAnimating = false;
+				}
+			}
+		});
+
+		if (nuffElems()) {
+			$prev.trigger('click');
+		}
+		else {
+			$cid.find('[data-carousel-item="1"]:first > img').trigger('click');
+		}
+
+		if (Modernizr.touch && $(window).width() < 700) {
+		if (nuffElems()) {
+			var script = document.createElement('script');
+			script.src = '/dist-web/js/vendor/jquery.touchswipe.js';
+			script.onload = function () {
+			// Execute your initialization code here after the module loads.
+			if ($('html').hasClass('touch') && $cid.find('[data-carousel-item]').length > 1) {
+				var $carouselList = $cid.find('[data-carousel] > ul'),
+					$swipeIcon = $cid.find('.swipe-icon'),
+					swipeStatus = function (event, phase, direction) {
+					if (phase === "move" && (direction === "left" || direction === "right")) {
+						$swipeIcon.fadeOut();
+					} else if (phase === "end") {
+						if (direction === "right") {
+						previousImage();
+						} else if (direction === "left") {
+						nextImage();
+						}
+					}
+					},
+					previousImage = function () {
+					$prev.trigger('click');
+					},
+					nextImage = function () {
+					$next.trigger('click');
+					};
+		
+				var swipeOptions = {
+				threshold: 75,
+				triggerOnTouchEnd: true,
+				swipeStatus: swipeStatus,
+				allowPageScroll: "vertical",
+				fallbackToMouseEvents: true,
+				excludedElements: "input, select, textarea, .noSwipe"
+				};
+		
+				if ($carouselList.length && typeof $carouselList.swipe === 'function') {
+					$carouselList.swipe(swipeOptions);
+				}
+				$swipeIcon.fadeIn();
+			}
+			};
+			script.onerror = function(err) {
+			console.error("Failed to load touch swipe module:", err);
+			};
+			document.head.appendChild(script);
+		}
+		}	   
+	}
+};
+
+(function() {
+
+	// "use strict";
+
+	var $carouselWidth;
+
+	function storeCarousel(id) {
+		var $cid = $('[data-carousel-id="' + id + '"]');
+		$cid.after('<div hidden aria-hidden="true" data-carousel-storage="' + id + '"></div>');
+		$('[data-carousel-storage="' + id + '"]').append($cid.html());
+	}
+
+	function restoreCarousels() {
+		$('[data-carousel-id]').each(function(index, el) {
+			var $id = $(el).data('carousel-id'),
+				$sid = $('[data-carousel-storage="' + $id + '"]');
+			$('[data-carousel-id="' + $id + '"]').empty().append($sid.html());
+			$sid.remove();
+		});
+		initCarousels();
+	}
+
+	function initCarousels() {
+		$('[data-carousel-id]').each(function(index, el) {
+			var $id = $(el).data('carousel-id'),
+				$this = $('[data-carousel-id="' + $id + '"]');
+			if ($this.next().attr('data-carousel-storage') !== $id) {
+				storeCarousel($id);
+			}
+			$this.find('[data-carousel]').carousel($id);
+		});
+	}
+
+	$(window)
+		.on('afterresize', function() {
+			if ($carouselWidth !== $('[data-carousel-id]:first').width()) {
+				restoreCarousels();
+				$carouselWidth = $('[data-carousel-id]:first').width();
+			}
+		})
+		.on('load', function() {
+			initCarousels();
+			$carouselWidth = $('[data-carousel-id]:first').width();
+		});
+})();

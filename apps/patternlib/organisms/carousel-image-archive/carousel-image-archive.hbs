@@ -1,0 +1,40 @@
+<div class="carousel-wrapper carousel-image-archive clearfix" data-carousel-id="{{id}}">
+	<div class="carousel-image-preview" aria-live="assertive" aria-relevant="additions" aria-atomic="true" data-carousel-image-preview>
+		<button type="button" class="carousel-prev" title="Forrige" data-carousel-prev>
+			<span class="visuallyhidden">Forrige</span>
+		</button>
+		<button type="button" class="carousel-next" title="Neste" data-carousel-next>
+			<span class="visuallyhidden">Neste</span>
+		</button>
+	</div>
+
+	<div class="carousel-info clearfix" data-carousel-info>
+		<div data-carousel-info-content aria-live="assertive" aria-relevant="additions" aria-atomic="true"></div>
+		<span class="carousel-info-pointer" data-carousel-info-pointer></span>
+	</div>
+
+	<div class="carousel" data-carousel>
+		<ul class="clearfix">
+			{{#each items}}
+			<li data-carousel-item="{{elem}}">
+				<img src="{{image}}" alt="{{alt}}" tabindex="0" data-preview="{{preview}}" data-carousel-image />
+				<div class="info">
+					<div class="info-credits">
+						{{{text}}}
+					</div>
+					<div class="download">
+						<button class="btn-download" aria-expanded="false" aria-controls="carousel_downloads_list_{{set}}_{{elem}}" data-toggle="#carousel_downloads_list_{{set}}_{{elem}}">Last ned bilde</button>
+						{{!-- <p>Last ned bilde:</p> --}}
+						<div id="carousel_downloads_list_{{set}}_{{elem}}" class="carousel-downloads-list">
+						{{!-- <div class="carousel-downloads-list"> --}}
+							{{{download}}}
+						</div>
+					</div>
+				</div>
+			</li>
+			{{/each}}
+		</ul>
+
+		<span class="swipe-icon"></span>
+	</div>
+</div>

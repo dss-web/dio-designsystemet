@@ -5,6 +5,8 @@
   "private": true,
   "packageManager": "pnpm@10.11.0",
   "scripts": {
+    "patternlib": "pnpm --filter @design/patternlib dev",
+    "patternlib:build": "pnpm --filter @design/patternlib build",
     "dev": "pnpm --filter @design/storybook storybook",
     "build-storybook": "pnpm --filter @design/storybook build-storybook",
     "lint": "eslint --fix",

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js" lang="no">
+	<head>
+		{{#block "head"}}
+			{{> head }}
+		{{/block}}
+
+		<meta name="robots" content="noindex, nofollow" />
+
+		<!-- Stylesheet for this specific page -->
+		<link rel="stylesheet" href="/Static/css/patternlib.css">
+		<link rel="stylesheet" href="/Static/patternlib/prism/prism.css">
+	</head>
+	<body class="{{body-class}}">
+		<!--[if lt IE 10]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<p class="enable-js">Aktiver Javascript i din nettleser for en bedre opplevelse på regjeringen.no</p>
+
+		<a href="#mainContent" class="skipLink">Til hovedinnhold</a>
+		<header class="pageHeader">
+			<div class="pageHeaderUpper">
+				<div class="logoWrapper">
+					<h1 class="logo">
+						<a href="./">bak.regjeringen.no<span></span></a>
+					</h1>
+
+					<button type="button" class="menuToggler" data-toggle-menu="">Meny</button>
+				</div>
+			</div>
+
+			<div class="mobileMenuContainer">
+				<div class="mobileMenuWrapper">
+					<div class="mobileMenuWrapperInner">
+						<nav class="megaMenu" role="navigation" aria-labelledby="mega-menu-label">
+							<h2 id="mega-menu-label" class="nav-title">Hovedmeny</h2>
+
+							<ul>
+								<li class="megaMenuItem">
+									<a href="#section-intro" role="button" class="primaryMenuItem" id="btn-intro" data-toggle-section="#section-intro" aria-controls="section-intro" aria-expanded="false">Intro</a>
+								</li>
+								<li class="megaMenuItem">
+									<a href="#section-atoms" role="button" class="primaryMenuItem" id="btn-atoms" data-toggle-section="#section-atoms" aria-controls="section-atoms" aria-expanded="false">Atoms</a>
+								</li>
+								<li class="megaMenuItem">
+									<a href="#section-molecules" role="button" class="primaryMenuItem" id="btn-molecules" data-toggle-section="#section-molecules" aria-controls="section-molecules" aria-expanded="false">Molecules</a>
+								</li>
+								<li class="megaMenuItem">
+									<a href="#section-organisms" role="button" class="primaryMenuItem" id="btn-organisms" data-toggle-section="#section-organisms" aria-controls="section-organisms" aria-expanded="false">Organisms</a>
+								</li>
+								{{!-- <li class="megaMenuItem">
+									<a href="#section-templates" role="button" class="primaryMenuItem" id="btn-templates" data-toggle-section="#section-templates" aria-controls="section-templates" aria-expanded="false">Templates</a>
+								</li> --}}
+								<li class="megaMenuItem">
+									<a href="#section-fonts-and-colors" role="button" class="primaryMenuItem" id="btn-fonts-and-colors" data-toggle-section="#section-fonts-and-colors" aria-controls="section-fonts-and-colors" aria-expanded="false">Fonts &amp; colors</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="megaMenuOverlay" data-megamenu-overlay></div>
+
+		<main id="mainContent" role="main" tabindex="-1" class="plContentArea">{{!-- mainContentArea --}}
+			{{!-- <div class="{{default content 'content'}}"> --}}
+				{{#block "body"}}
+					<h1>Default body</h1>
+				{{/block}}
+			{{!-- </div> --}}
+		</main>
+
+		{{> javascripts }}
+		{{#block "scripts"}}
+			{{! Scripts from templates }}
+		{{/block}}
+	</body>
+</html>

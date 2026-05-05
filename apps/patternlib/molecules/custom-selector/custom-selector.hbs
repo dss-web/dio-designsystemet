@@ -1,0 +1,8 @@
+<div class="custom-selector">
+	<label for="{{select-id}}" data-custom-selector-label="{{data-id}}">{{label-text}}</label>
+	<select id="{{select-id}}" data-custom-selector-id="{{data-id}}">
+		{{#each options}}
+		<option value="{{value}}"{{#if classes}} class="{{classes}}"{{/if}}>{{text}}</option>
+		{{/each}}
+	</select>
+</div>

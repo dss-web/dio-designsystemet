@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="no-js" lang="no">
+	<head>
+		{{#block "head"}}
+			{{> head-horingssvar }}
+		{{/block}}
+
+		<!-- BEGIN this is only for bak.regjeringen.no -->
+		<meta name="robots" content="noindex, nofollow" />
+		<!-- /BEGIN -->
+	</head>
+	<body class="{{body-class}}">
+		<!--[if lt IE 10]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<a id="top-of-page" tabindex="-1"></a>
+		<a href="#mainContent" class="skipLink">Til hovedinnhold</a>
+		<header class="pageHeader" role="banner">
+			<h2 class="visuallyhidden">Hovednavigasjon og hjelpeverktøy</h2>
+
+			<div class="hygieneMenuWrapper">
+				<div class="small-logo-wrapper">
+					<div class="small-logo">
+						<a href="./">Regjeringen.no<span><span></span></span></a>
+					</div>
+				</div>
+
+				<span data-hygiene-menu-large-sceen-anchor></span>
+
+				<nav class="hygieneMenu" aria-labelledby="hygiene-menu-label" data-hygiene-menu>
+					<h2 id="hygiene-menu-label" class="nav-title">Globale verktøy</h2>
+
+					<ul>
+						<li class="fontsize">
+							<button type="button" id="fontsize_note_label" aria-controls="fontsize_note" aria-expanded="false" data-fontsize-btn>Skriftstørrelse</button>
+
+							<div tabindex="-1" id="fontsize_note" aria-labelledby="fontsize_note_label" data-fontsize-note>
+								<p>For å endre tekststørrelsen, hold Ctrl-tasten nede (Cmd-tasten på Mac) og trykk på + for å forstørre eller - for å forminske.</p>
+							</div>
+						</li>
+						<li class="language">
+							<button
+								type="button"
+								id="languageSelectorTrigger"
+								lang="no"
+								data-toggle-language-selector=""
+								aria-expanded="false"
+								aria-controls="languageSelector"
+								class="language-selector-trigger flag nob"
+							><span>Norsk</span></button>
+							<ul
+								id="languageSelector"
+								class="custom-language-selector"
+								tabindex="-1"
+								aria-labelledby="languageSelectorTrigger"
+								data-language-selector=""
+							>
+								<li class="disabled">
+									<span lang="no" class="flag nob">Viser denne siden på norsk</span>
+								</li>
+								<li>
+									<a href="/se/id4/" lang="se-NO" class="flag sme">Čájet dán siiddu sámegillii</a>
+								</li>
+								<li class="last-in-group">
+									<a href="/en/id4/" lang="en-GB" class="flag eng">Show this page in English</a>
+								</li>
+								<li>
+									<a href="/no/id4/" lang="no" class="flag nob">Norsk forside</a>
+								</li>
+								<li>
+									<a href="/se/id4/" lang="se-NO" class="flag sme">Sámegiel álgosiidui</a>
+								</li>
+								<li>
+									<a href="/en/id4/" lang="en-GB" class="flag eng">English home page</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="pageHeaderUpper">
+				<div class="page-title-wrapper">
+					<div class="page-title">
+						<span>Høringer på regjeringen.no<span></span></span>
+					</div>
+
+					<button type="button" class="menuToggler" data-toggle-menu>Meny</button>
+				</div>
+			</div>
+
+			<div class="mobileMenuContainer">
+				<div class="mobileMenuWrapper">
+					<div class="mobileMenuWrapperInner">
+						<div class="topNavigationSearch">
+							<a href="" class="register-new">Registrer ny bruker</a>
+
+							<a href="" class="btn-login">Logg inn</a>
+						</div>
+					</div>
+
+					<span data-hygiene-menu-small-sceen-anchor></span>
+				</div>
+
+				<div class="breadcrumbsWrapper">
+					<nav class="breadcrumbs" id="breadcrumbs_example">
+						<h2 id="breadcrumbs-label" class="breadcrumbs-label">Du er her: </h2>
+						<ul aria-labelledby="breadcrumbs-label">
+							<li><a href="">Forsiden</a></li>
+							<li class="crumbItem"><a href="">En side</a></li>
+							<li><a href="">En annen side</a></li>
+							<li>Denne side</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<div class="megaMenuOverlay" data-megamenu-overlay></div>
+
+		<main id="mainContent" role="main" tabindex="-1" class="mainContentArea ng-scope" data-ng-app="app.form">
+			{{!-- <div class="{{default content 'content'}}"> --}}
+				{{#block "body"}}
+					<h1>Default body</h1>
+				{{/block}}
+
+        {{>molecule-to-top-of-page}}
+			{{!-- </div> --}}
+		</main>
+
+		<footer class="page-footer">
+			<div class="wrapper">
+				<div class="clearfix">
+					<div class="col">
+						<span class="logo"></span>
+						{{!-- <div class="logo">
+							<a href="/">Regjeringen.no<span></span></a>
+						</div> --}}
+					</div>
+
+					<div class="col"></div>
+
+					<div class="col">
+						<ul>
+							<li>Ansvarlig for Høringer på regjeringen.no</li>
+							<li>
+								<a href="">Departementenes digitaliseringsorganisasjon</a>
+							</li>
+							<li>
+								Telefon: 22 24 90 90<br>
+								E-post: <a href="">redaksjonen@dio.dep.no</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		{{> javascripts-horingssvar }}
+		{{#block "scripts"}}
+			{{! Scripts from templates }}
+		{{/block}}
+	</body>
+</html>

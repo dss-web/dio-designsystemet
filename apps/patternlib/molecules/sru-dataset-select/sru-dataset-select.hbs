@@ -1,0 +1,9 @@
+<div class="sru-dataset-select">
+	<label for="{{id}}">{{label-text}}</label><br>
+	{{#if has-loader}}<div id="loader" style="display: none;"><span style="width: 20px; height: 20px;" class="loader is-loading"></span></div>{{/if}}
+	<select id="{{id}}"{{#if disabled}} class="disabled-ddl" disabled{{/if}}>
+	{{#each options}}
+		<option value="{{value}}"{{#if change}} onchange="{{change}}"{{/if}}>{{text}}</option>
+	{{/each}}
+	</select>
+</div>

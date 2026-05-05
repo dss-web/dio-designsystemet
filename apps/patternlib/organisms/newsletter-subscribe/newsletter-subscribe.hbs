@@ -1,0 +1,31 @@
+<div class="newsletter-subscribe" data-newsletter-subscribe="{{block-id}}" data-newsletter-subscribe-id="{{id}}" data-newsletter-endpoint="https://dev.regjeringen.no/no/api/PageSubscriptionApi/SubscribeToPage">
+	<div class="newsletter-subscribe-initial" data-initial>
+		<button type="button" class="btn btn-no-icon" data-open>{{btn-open}}</button>
+	</div>
+
+	<div class="newsletter-subscribe-action hidden" data-action>
+		{{{title}}}
+		<div class="base-form newsletter-subscribe-form">
+			<fieldset>
+				<label for="email_{{block-id}}" class="newsletter-subscribe-label">{{label}}</label>
+				<div class="newsletter-subscribe-action">
+					<div class="newsletter-subscribe-field">
+						<input type="email" id="email_{{block-id}}" class="newsletter-subscribe-input" data-email>
+						<p class="newsletter-subscribe-error hidden" data-error>E-post adressen er ikke gyldig</p>
+					</div>
+					<div class="newsletter-subscribe-buttons">
+						<button type="button" class="btn btn-no-icon btn-cta" data-submit>{{btn-submit}}</button>
+						<button type="button" class="btn btn-no-icon btn-cancel" data-cancel>{{btn-cancel}}</button>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+
+	<div class="newsletter-subscribe-feedback hidden" data-feedback>
+		<div class="newsletter-subscribe-response" data-response></div>
+		<button type="button" class="btn btn-no-icon btn-ok" data-ok>
+			<span class="visuallyhidden">{{btn-done}}</span>
+		</button>
+	</div>
+</div>

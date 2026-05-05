@@ -1,0 +1,2638 @@
+{{#extend 'layout-patternlib' title="Pattern Library" body-class="page-article" }}
+	{{#content 'body' }}
+		<div id="section-intro" class="sg-section">
+			<div class="content-row header-row">
+				<div class="content-col-2">
+					<div class="pl-comments">
+						<h1 class="sg-section-h1">Pattern library for regjeringen.no</h1>
+						<p>This is a resource for people working with the Government website regjeringen.no. It aims to provide an overview of typical elements and components in the user interface of the website.</p>
+						<p>The pattern library can be used to maintain modular frontend code and to ensure a visual consistency on the website of the government.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="section-atoms" class="sg-section">
+			<div class="content-row header-row">
+				<div class="content-col-2">
+					<h2 class="sg-section-h1">Atoms</h2>
+				</div>
+				<div class="content-col-1 t-right">
+					<button type="button" class="btn btn-no-icon btn-action btn-toggle-backgrounds" data-toggle-backgrounds>Toggle preview background: <span>grid</span></button>
+				</div>
+			</div>
+
+			<div class="content-row">
+				<h3 class="sg-section-h2" id="a-headings">Headings</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>H1 heading is mostly used in combination with a the <code>&lt;header&gt;</code> element:</p>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;header class="content-col-3 header">
+									&lt;h1>Karbonnøytral innen 2030&lt;/h1>
+								&lt;/header>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<header class="content-col-3 header">
+							<h1>Bedre lønnsomhet for gårdsbruk i Nord-Norge</h1>
+						</header>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<h2>Bedre lønnsomhet for gårdsbruk i Nord-Norge</h2>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<h3>Bedre lønnsomhet for gårdsbruk i Nord-Norge</h3>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<h4>Bedre lønnsomhet for gårdsbruk i Nord-Norge</h4>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<h5>Bedre lønnsomhet for gårdsbruk i Nord-Norge</h5>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<h6>Bedre lønnsomhet for gårdsbruk i Nord-Norge</h6>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-paragraph">Paragraph</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<p>Lorem ipsum Dolore non sunt fugiat aute Duis laborum officia ut minim in et elit ad culpa sed velit occaecat magna enim.</p>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-blockquote">Blockquote</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<blockquote>
+							<p>Lorem ipsum Dolore non sunt fugiat aute Duis laborum officia ut minim in et elit ad culpa sed velit occaecat magna enim.</p>
+							<cite>- Tordenskiold</cite>
+						</blockquote>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-inline-elements">Inline Elements</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<p><a href="#">This is a text link</a></p>
+						<p><strong>Strong is used to indicate strong importance</strong></p>
+						<p><em>This text has added emphasis</em></p>
+						<p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
+						<p>The <i>i element</i> is text that is set off from the normal text</p>
+						<p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
+						<p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
+						<p><s>This text has a strikethrough</s></p>
+						<p>Superscript<sup>®</sup></p>
+						<p>Subscript for things like H<sub>2</sub>O</p>
+						<p><small>This small text is small for for fine print, etc.</small></p>
+						<p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+						<p>Keybord input: <kbd>Cmd</kbd></p>
+						<p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
+						<p><cite>This is a citation</cite></p>
+						<p>The <dfn>dfn element</dfn> indicates a definition.</p>
+						<p>The <mark>mark element</mark> indicates a highlight</p>
+						<p><code>This is what inline code looks like.</code></p>
+						<p><samp>This is sample output from a computer program</samp></p>
+						<p>The <var>variable element</var>, such as <var>x</var> = <var>y</var></p>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-hr">Hr (horisontal ruler)</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<hr>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Read more</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>Optional classes: <code>.left</code> | <code>.right</code> (default is right-aligned)</p>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;p class="read-more">
+									&lt;a href="">Alle dokumenter om Klima&lt;/a>
+								&lt;/p>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						{{#atom-read-more '{"text": "Alle dokumenter om Klima"}' }}{{/atom-read-more}}
+						{{#atom-read-more '{"class": "left", "text": "Alle dokumenter om Klima"}' }}{{/atom-read-more}}
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-unordered">Unordered list</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<ul>
+							<li>This is a list item in an unordered list</li>
+							<li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line. </li>
+							<li>
+								Lists can be nested inside of each other
+								<ul>
+									<li>This is a nested list item</li>
+									<li>This is another nested list item in an unordered list</li>
+								</ul>
+							</li>
+							<li>This is the last list item</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-ordered">Ordered list</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<ol>
+							<li>This is a list item in an ordered list</li>
+							<li>An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters.</li>
+							<li>
+								Lists can be nested inside of each other
+								<ol>
+									<li>This is a nested list item</li>
+									<li>This is another nested list item in an ordered list</li>
+								</ol>
+							</li>
+							<li>This is the last list item</li>
+						</ol>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-definition">Description list</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<dl>
+							<dt>Definition List</dt>
+							<dd>A number of connected items or names written or printed consecutively, typically one below the other.</dd>
+							<dt>This is a term.</dt>
+							<dd>This is the definition of that term, which both live in a <code>dl</code>.</dd>
+							<dt>Here is another term.</dt>
+							<dd>And it gets a definition too, which is this line.</dd>
+							<dt>Here is term that shares a definition with the term below.</dt>
+							<dd>And it gets a definition too, which is this line.</dd>
+						</dl>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Input Fields</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>Add class <code>base-form</code> on parent element:</p>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="base-form">
+									...
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<div class="base-form">
+							<label for="text">Text Input</label>
+							<input id="text" type="text" placeholder="Text Input">
+							<input id="text_disabled" type="text" placeholder="Text Input (disabled)" disabled="disabled">
+							<br>
+							<label for="password">Password</label>
+							<input id="password" type="password" placeholder="Type your Password">
+							<br>
+							<label for="textarea">Textarea</label>
+							<textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+							<br>
+							<label class="error">Error Input</label>
+							<input class="is-error" type="text" placeholder="Text Input">
+							<br>
+							<label class="valid">Valid</label>
+							<input class="is-valid" type="text" placeholder="Text Input">
+							<br>
+							<label for="webaddress">Web Address (html5 element)</label>
+							<input id="webaddress" type="url" placeholder="http://yoursite.com">
+							<br>
+							<label for="emailaddress">Email Address (html5 element)</label>
+							<input id="emailaddress" type="email" placeholder="name@email.com">
+							<br>
+							<label for="search">Search (html5 element)</label>
+							<input id="search" type="search" placeholder="Enter Search Term">
+							<br>
+							<label for="textn">Number Input (html5 element)</label>
+							<input id="textn" type="number" placeholder="Enter a Number">
+						</div>
+					</div>
+				</div>
+				<h3 class="sg-section-h2">Input Fields (Mini)</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>Add class <code>mini-input</code> on input element:</p>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;input class="mini-input"&gt;
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<div class="base-form">
+							<label for="mtextn">Number Input (html5 element)</label>
+							<input class="mini-input" id="mtextn" type="number" placeholder="0">
+						</div>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-select-menu">Select Menu <span>– See also <a href="#m-custom-select-menu" data-in-section="#section-molecules" data-flash-target>Custom Select Menu</a></span></h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<!-- <label for="select">Select</label> -->
+						<select id="select">
+							<option value="One">Option One</option>
+							<option value="Two">Option Two</option>
+							<option value="Three">Option Three</option>
+							<optgroup label="Option Group">
+								<option value="Four">Option Four</option>
+								<option value="Five">Option Five</option>
+								<option value="Six">Option Six</option>
+							</optgroup>
+						</select>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-checkbox">Checkboxes</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<form action="#">
+							<fieldset class="options">
+								<legend>Choose something</legend>
+								<div>
+									<input id="checkbox1" name="checkbox" type="checkbox" checked="checked">
+									<label for="checkbox1">Choice A</label>
+								</div>
+								<div>
+									<input id="checkbox2" name="checkbox" type="checkbox">
+									<label for="checkbox2">Choice B</label>
+								</div>
+								<div>
+									<input id="checkbox3" name="checkbox" type="checkbox">
+									<label for="checkbox3">Choice C</label>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-checkbox-custom">Checkboxes <span class="sg-section-note">[Custom]</span></h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>Wrap each set of <code>input</code> + <code>label</code>'s in a <code>div.custom-checkbox</code> – optional class <code>.horizontal</code>:</p>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="custom-checkbox">
+									&lt;input id="checkbox1a" name="checkbox" type="checkbox" checked="checked">
+									&lt;label for="checkbox1a">Choice A&lt;/label>
+								&lt;/div>
+
+								&lt;div class="custom-checkbox horizontal">
+									&lt;input id="checkbox1b" name="checkbox" type="checkbox" checked="checked">
+									&lt;label for="checkbox1b">Choice A&lt;/label>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<form action="#">
+							{{#atom-custom-checkbox '{"legend": "Choose something", "options": [{"id": "checkbox1a", "label": "Choice A", "checked": "true"},{"id": "checkbox2a", "label": "Choice B"},{"id": "checkbox3a", "label": "Choice C"}]}' }}{{/atom-custom-checkbox}}
+							{{#atom-custom-checkbox '{"legend": "Choose something", "options": [{"id": "checkbox1b", "label": "Choice A", "horizontal": "true", "checked": "true"},{"id": "checkbox2b", "label": "Choice B", "horizontal": "true"},{"id": "checkbox3b", "label": "Choice C", "horizontal": "true"}]}' }}{{/atom-custom-checkbox}}
+						</form>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-radio-buttons">Radio Buttons</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<form action="#">
+							<fieldset class="options">
+								<legend>Choose one</legend>
+								<div>
+									<input id="radio1a" name="radio" type="radio" checked="checked">
+									<label for="radio1a">Choice A</label>
+								</div>
+								<div>
+									<input id="radio2a" name="radio" type="radio">
+									<label for="radio2a">Choice B</label>
+								</div>
+								<div>
+									<input id="radio3a" name="radio" type="radio">
+									<label for="radio3a">Choice C</label>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-radio-buttons-custom">Radio Buttons <span class="sg-section-note">[Custom]</span></h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>Each <code>input</code> + <code>label</code> set is wrapped in a <code>div.custom-radio</code>:</p>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="custom-radio">
+									&lt;input id="radio1a" name="radio" type="radio" checked="checked">
+									&lt;label for="radio1a">Choice A&lt;/label>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<form action="#">
+							<fieldset class="options">
+								<legend>Choose one</legend>
+								<div class="custom-radio">
+									<input id="radio1a2" name="radio" type="radio" checked="checked">
+									<label for="radio1a2">Choice A</label>
+								</div>
+								<div class="custom-radio">
+									<input id="radio2a2" name="radio" type="radio">
+									<label for="radio2a2">Choice B</label>
+								</div>
+								<div class="custom-radio">
+									<input id="radio3a2" name="radio" type="radio">
+									<label for="radio3a2">Choice C</label>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Button</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>Button styling will work on both <code>a</code> and <code>button</code> elements</p>
+						<p>Optional classes <code>.btn-no-icon</code> <code>.btn-cta</code> <code.btn-warning></code> <code>.btn-wide</code></p>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;a href="" class="btn btn-no-icon">Knapp&lt;/a>
+								&lt;a href="" class="btn btn-cta">Call-to-action knapp&lt;/a>
+								&lt;a href="" class="btn btn-warning">Varselsknapp&lt;/a>
+								&lt;a href="" class="btn btn-wide">Full-bredde knapp&lt;/a>
+								&lt;a href="" class="btn btn-icon-left rss-icon">Ikon venstre knapp&lt;/a>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-details">
+						<h3 class="pattern-name">class <code>.btn</code></h3>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<a href="" class="btn">Knapp</a>
+						<button type="button" class="btn">Knapp</button>
+					</div>
+				</div>
+
+				<div class="pattern">
+					<div class="pattern-details">
+						<h3 class="pattern-name">class <code>.btn.btn-no-icon</code></h3>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<a href="" class="btn btn-no-icon">Knapp</a>
+					</div>
+				</div>
+
+				<div class="pattern">
+					<div class="pattern-details">
+						<h3 class="pattern-name">class <code>.btn.btn-cta</code></h3>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<a href="" class="btn btn-cta">Call-to-action knapp</a>
+					</div>
+				</div>
+
+				<div class="pattern">
+					<div class="pattern-details">
+						<h3 class="pattern-name">class <code>.btn.btn-warning</code></h3>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<a href="" class="btn btn-warning">Varselsknapp</a>
+					</div>
+				</div>
+
+				<div class="pattern">
+					<div class="pattern-details">
+						<h3 class="pattern-name">class <code>.btn.btn-wide</code></h3>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<a href="" class="btn btn-wide">Full-bredde knapp</a>
+					</div>
+				</div>
+
+				<div class="pattern">
+					<div class="pattern-details">
+						<h3 class="pattern-name">class <code>.btn.btn-icon-left rss-icon</code></h3>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<a href="" class="btn btn-icon-left rss-icon">Ikon venstre (rss)</a>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-table">Table <span>– See also <a href="#m-table-wrapper" data-in-section="#section-molecules" data-flash-target>Table-wrapper plugin</a></span></h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<table>
+							<thead>
+								<tr>
+									<th>Lorem</th>
+									<th>Ipsum</th>
+									<th>Consectetur</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+									<td>Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem.</td>
+									<td>Ipsam iure molestias excepturi nihil quam. Officiis ipsum quidem repellendus.</td>
+								</tr>
+								<tr>
+									<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem, ipsam iure molestias excepturi nihil quam. Officiis ipsum quidem repellendus.</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem, ipsam iure molestias excepturi nihil quam. Officiis ipsum quidem repellendus.</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem, ipsam iure molestias excepturi nihil quam. Officiis ipsum quidem repellendus.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-icons">Icons</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea-white">
+						<ul class="regjeringen-symbols">
+							<li>
+								<span class="icon-rss"></span>
+								<span class="class-name"> icon-rss</span>
+							</li>
+							<li>
+								<span class="icon-print"></span>
+								<span class="class-name"> icon-print</span>
+							</li>
+							<li>
+								<span class="icon-previous"></span>
+								<span class="class-name"> icon-previous</span>
+							</li>
+							<li>
+								<span class="icon-next"></span>
+								<span class="class-name"> icon-next</span>
+							</li>
+							<li>
+								<span class="icon-download"></span>
+								<span class="class-name"> icon-download</span>
+							</li>
+							<li>
+								<span class="icon-share"></span>
+								<span class="class-name"> icon-share</span>
+							</li>
+							<li>
+								<span class="icon-menu"></span>
+								<span class="class-name"> icon-menu</span>
+							</li>
+							<li>
+								<span class="icon-search"></span>
+								<span class="class-name"> icon-search</span>
+							</li>
+							<li>
+								<span class="icon-love"></span>
+								<span class="class-name"> icon-love</span>
+							</li>
+							<li>
+								<span class="icon-times"></span>
+								<span class="class-name"> icon-times</span>
+							</li>
+							<li>
+								<span class="icon-tick"></span>
+								<span class="class-name"> icon-tick</span>
+							</li>
+							<li>
+								<span class="icon-plus"></span>
+								<span class="class-name"> icon-plus</span>
+							</li>
+							<li>
+								<span class="icon-minus"></span>
+								<span class="class-name"> icon-minus</span>
+							</li>
+							<li>
+								<span class="icon-arrow-right"></span>
+								<span class="class-name"> icon-arrow-right</span>
+							</li>
+							<li>
+								<span class="icon-arrow-down"></span>
+								<span class="class-name"> icon-arrow-down</span>
+							</li>
+							<li>
+								<span class="icon-arrow-up"></span>
+								<span class="class-name"> icon-arrow-up</span>
+							</li>
+							<li>
+								<span class="icon-arrow-left"></span>
+								<span class="class-name"> icon-arrow-left</span>
+							</li>
+							<li>
+								<span class="icon-world"></span>
+								<span class="class-name"> icon-world</span>
+							</li>
+							<li>
+								<span class="icon-social-twitter"></span>
+								<span class="class-name"> icon-social-twitter</span>
+							</li>
+							<li>
+								<span class="icon-social-facebook"></span>
+								<span class="class-name"> icon-social-facebook</span>
+							</li>
+							<li>
+								<span class="icon-media-stop"></span>
+								<span class="class-name"> icon-media-stop</span>
+							</li>
+							<li>
+								<span class="icon-media-record"></span>
+								<span class="class-name"> icon-media-record</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-portrait">Portrait</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<img src="//www.regjeringen.no/contentassets/0cd66d0d5162498884a3f92cb2b50c7f/portrett_smk.jpg?preset=portrait&amp;version=635461224360670000" alt="Statsminister Erna Solberg">
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-favicons">Favicon</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<img src="/Static/ico/favicon-16x16.png" alt="">
+						<img src="/Static/ico/favicon-32x32.png" alt="">
+						<img src="/Static/ico/favicon-96x96.png" alt="">
+						<img src="/Static/ico/favicon-160x160.png" alt="">
+						<img src="/Static/ico/favicon-192x192.png" alt="">
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-landscape-4x3">Landscape 4x3</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<img src="//placehold.it/720x540" alt="4x3 image">
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-landscape-16x9">Landscape 16x9</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<img src="//placehold.it/960x540" alt="16x9 image">
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-square">Square</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<img src="//placehold.it/540x540" alt="1x1 image">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="section-molecules" class="sg-section">
+			<div class="content-row header-row">
+				<div class="content-col-2">
+					<h2 class="sg-section-h1">Molecules</h2>
+				</div>
+				<div class="content-col-1 t-right">
+					<button type="button" class="btn btn-no-icon btn-action btn-toggle-backgrounds" data-toggle-backgrounds>Toggle preview background: <span>grid</span></button>
+				</div>
+			</div>
+
+			<div class="content-row">
+				<h3 class="sg-section-h2">Base grid, 3 columns</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>Sample code where <code>.content-row</code> and <code>.content-col-<em>n</em></code> have variating utility and styling classes:</p>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="<em>content-row header-row</em>">
+									&lt;div class="<em>content-col-3 content-header</em>">
+										..
+									&lt;/div>
+								&lt;/div>
+
+								&lt;div class="<em>content-row ingress-row</em>">
+									&lt;div class="<em>content-col-3 content-header</em>">
+										..
+									&lt;/div>
+								&lt;/div>
+
+								&lt;div class="<em>content-row border-top</em>">
+									&lt;div class="<em>content-col-3 content-section content-useful-links</em>">
+										..
+									&lt;/div>
+								&lt;/div>
+
+								&lt;div class="<em>content-row</em>">
+									&lt;div class="<em>content-col-1 content-section content-current</em>">
+										..
+									&lt;/div>
+									&lt;div class="<em>content-col-1 content-section content-current</em>">
+										..
+									&lt;/div>
+									&lt;div class="<em>content-col-1 content-section content-current</em>">
+										..
+									&lt;/div>
+								&lt;/div>
+
+								&lt;div class="<em>content-row</em>">
+									&lt;div class="<em>content-col-2 content-section content-current</em>">
+										..
+									&lt;/div>
+									&lt;div class="<em>content-col-1 content-section content-current</em>">
+										..
+									&lt;/div>
+								&lt;/div>
+
+								&lt;div class="<em>content-row</em>">
+									&lt;div class="<em>content-col-3 content-intro-topics</em>">
+										..
+									&lt;/div>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid pattern-preview-color-grid mainContentArea" data-pattern-preview>
+						<div class="content-row">
+							<div class="content-col-3">
+								<code>[content-col-3]</code>
+							</div>
+						</div>
+						<br>
+						<div class="content-row">
+							<div class="content-col-2">
+								<code>[content-col-2]</code>
+							</div>
+							<div class="content-col-1">
+								<code>[content-col-1]</code>
+							</div>
+						</div>
+						<br>
+						<div class="content-row">
+							<div class="content-col-1">
+								<code>[content-col-1]</code>
+							</div>
+							<div class="content-col-2">
+								<code>[content-col-2]</code>
+							</div>
+						</div>
+						<br>
+						<div class="content-row">
+							<div class="content-col-1">
+								<code>[content-col-1]</code>
+							</div>
+							<div class="content-col-1">
+								<code>[content-col-1]</code>
+							</div>
+							<div class="content-col-1">
+								<code>[content-col-1]</code>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">.department-contact</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="department-contact content-col-1">
+									&lt;h2 class="title">Kontakt for Miljø&lt;/h2>
+
+									&lt;p>&lt;a href="">Klima- og miljødepartementet&lt;/a>&lt;br>
+										&lt;a href="">Send e-post&lt;/a>&lt;br>
+										Telefon: 22 24 58 03&lt;br>
+										&lt;br>
+										&lt;strong>Adresse:&lt;/strong>&lt;br>
+										Klima- og miljødepartementet&lt;br>
+										P.B. 8013 Dep&lt;br>
+										0030 Oslo&lt;/p>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<div class="department-contact content-col-1">
+							<h2 class="title">Kontakt for Miljø</h2>
+
+							<p><a href="">Klima- og miljødepartementet</a><br>
+								<a href="">Send e-post</a><br>
+								Telefon: 22 24 58 03<br>
+								<br>
+								<strong>Adresse:</strong><br>
+								Klima- og miljødepartementet<br>
+								P.B. 8013 Dep<br>
+								0030 Oslo</p>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">.content-section</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="content-section content-col-1 content-current">
+									&lt;h2 class="title">&lt;a href="">Økning under 2°C&lt;/a>&lt;/h2>
+									&lt;p>Norge vil jobbe for at den globale temperaturøkningen skal holdes under 2°C sammenlignet med førindustrielt nivå.&lt;/p>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<div class="content-section content-col-1 content-current">
+							<h2 class="title"><a href="">Økning under 2°C</a></h2>
+							<p>Norge vil jobbe for at den globale temperaturøkningen skal holdes under 2°C sammenlignet med førindustrielt nivå.</p>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">.content-owner-dep</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="content-owner-dep content-col-1">
+									&lt;a href="">KLD | Klima- og miljødepartementet&lt;/a>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						{{#molecule-content-owner-dep '{"dep-abbr": "KLD", "dep": "Klima- og miljødepartementet"}'}}{{/molecule-content-owner-dep}}
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Content header subtitle</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>Note that for semantic reasons (structural order) a visual sub-heading "Tema" is hidden with <code>aria-hidden</code> and a non-visual like is added for screen-readers etc.</p>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="content-header content-col-3">
+									&lt;p class="content-header-subtitle" aria-hidden="true">Tema&lt;/p>
+									&lt;h1>Klima og miljø&lt;/h1>
+									&lt;p class="content-header-subtitle visuallyhidden">Tema&lt;/p>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						{{#molecule-content-header-subtitle '{"title": "Klima og miljø", "subtitle": "Tema"}'}}{{/molecule-content-header-subtitle}}
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Article info</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;p class="article-info">Artikkel | Sist oppdatert: 10.03.2014&lt;/p>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<p class="article-info">Artikkel | Sist oppdatert: 10.03.2014</p>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Ingress</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="ingress">
+									&lt;p>Klima- og miljødepartementet har hovedansvaret for å ivareta helheten i regjeringens klima- og miljøpolitikk.&lt;/p>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						{{#molecule-ingress '{"text": "<p>Klima- og miljødepartementet har hovedansvaret for å ivareta helheten i regjeringens klima- og miljøpolitikk.</p>"}'}}{{/molecule-ingress}}
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="m-custom-select-menu">Custom Select Menu</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="custom-selector">
+									&lt;label for="dokumenttype" data-custom-selector-label="1">Innholdstype&lt;/label>
+									&lt;select id="dokumenttype" data-custom-selector-id="1">
+										&lt;option value="/no/dokument/id2000006/?documenttype=" class="group-header first-in-group">Alle innholdstyper&lt;/option>
+										&lt;option value="/no/dokument/id2000006/?documenttype=dokumenter/anbud" class="group-header first-in-group">Anbud (92)&lt;/option>
+										...
+										&lt;option value="/no/dokument/id2000006/?documenttype=dokumenter/loverogregler/Forskrift">Forskrifter (2138)&lt;/option>
+										&lt;option value="/no/dokument/id2000006/?documenttype=dokumenter/loverogregler/Kongeligresolusjon">Kongeleg resolusjon (194)&lt;/option>
+										&lt;option value="/no/dokument/id2000006/?documenttype=dokumenter/loverogregler/Lov">Lover (394)&lt;/option>
+									&lt;/select>
+								&lt;/div>
+							</code>
+						</pre>
+						<p>The custom select module depends on script <code>select-module.js</code> (jQuery dependent) which should be included at bottom of page:</p>
+						<pre class="language-markup">
+							<code>
+								&lt;script src="/Static/js/select-module.js">&lt;/script>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<div class="content-col-1">
+							{{#molecule-custom-selector '{"data-id": "1", "select-id": "documenttype", "label-text": "Innholdstype", "options": [{"value": "/no/dokument/id2000006/?documenttype=", "text": "Alle innholdstyper", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/anbud", "text": "Anbud (92)", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/brev", "text": "Brev (2631)", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/h%C3%B8ringer", "text": "Høringer (3979)", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/konsesjoner", "text": "Konsesjoner (198)", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/loverogregler", "text": "Lover og regler (6774)", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/loverogregler/Forskrift", "text": "Forskrifter (2138)"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/loverogregler/Kongeligresolusjon", "text": "Kongeleg resolusjon (194)"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/loverogregler/Lov", "text": "Lover (394)"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/loverogregler/Reglement", "text": "Reglement (381)"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/loverogregler/Retningslinjer", "text": "Retningslinjer (129)"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/loverogregler/Rundskriv", "text": "Rundskriv (1913)"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/loverogregler/Prinsipputtalelsefortolkning", "text": "Tolkningsuttalelse (1625)"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/meldinger", "text": "Meldinger (824)", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/nouer", "text": "NOU-er (568)", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/planer", "text": "Planer (322)", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/proposisjoner", "text": "Proposisjoner (3983)", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/rapporter", "text": "Rapporter (3634)", "classes": "group-header first-in-group"},{"value": "/no/dokument/id2000006/?documenttype=dokumenter/veiledningerogbrosjyrer", "text": "Veiledninger og brosjyrer (910)", "classes": "group-header first-in-group"}]}'}}{{/molecule-custom-selector}}
+						</div>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2 sg-deprecated" id="m-table-wrapper">Table-wrapper plugin [deprecated]</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>The table-wrapper plugin wraps a table which is too wide for the parent element. The plugin depends on script <code>jquery.tablewrapper.js</code> (jQuery dependent) which should be included at bottom of page:</p>
+						<pre class="language-markup">
+							<code>
+								&lt;script src="/Static/js/vendor/jquery.tablewrapper.js">&lt;/script>
+								&lt;script>
+									$("article table").tablewrapper({
+										textclosed: 'Vis tabellen i full bredde',
+										textopen: 'Skjul overflytende tabell innhold'
+									});
+								&lt;/script>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<table data-wrap-table>
+							<thead>
+								<tr>
+									<th>Lorem</th>
+									<th>Ipsum</th>
+									<th>Consectetur</th>
+									<th>Eaque perferendis</th>
+									<th>Lorem</th>
+									<th>Ipsum</th>
+									<th>Consectetur</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+									<td>Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem.</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque perferendis pariatur recusandae?</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+									<td>Ratione dolores ex, excepturi nihil quam. Officiis ipsum quidem repellendus quaerat ea, ullam dolorem.</td>
+									<td>Ipsam iure molestias excepturi nihil quam. Officiis ipsum quidem repellendus.</td>
+									<td>Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem.</td>
+								</tr>
+								<tr>
+									<td>Pariatur ratione dolores ex, quaerat ea, ullam dolorem excepturi nihil quam. Officiis ipsum quidem repellendus.</td>
+									<td>Consectetur adipisicing elit. Animi ratione dolores ex, quaerat ea, ullam dolorem, ipsam iure molestias.</td>
+									<td>Excepturi nihil quam ipsum quidem repellendus quaerat ea, ullam dolorem.</td>
+									<td>Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem.</td>
+									<td>Ipsam iure molestias excepturi nihil quam. Officiis ipsum quidem repellendus.</td>
+									<td>Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem.</td>
+									<td>Lorem ipsum dolor sit amenimi ratione dolores ex, quaerat ea, ullam dolorem, ipsam iure molestias.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="m-table-wrapper">Wrap wide content plugin (replacement for the table-wrapper plugin above)</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>This plugin will hide overflowing parts of tables which is too wide for its surrounding container (parent-element) and add a button above the table which (when clicked) opens the table in a lightbox. The plugin depends on script <code>lightbox-content.js</code> (jQuery dependent):</p>
+						<pre class="language-markup">
+							<code>
+								&lt;script src="/Static/js/lightbox-content.js">&lt;/script>
+								&lt;script>
+									$('.article-body img, .article-body table').wrapWideContent({
+										//container: $('.article-body, .longdoc-content'),
+										//threshold: 1.7856,
+										langZoomImage: 'Forstørr bilde',
+										langShowFullTable: 'Vis tabellen i full bredde'
+									});
+								&lt;/script>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<table>
+							<thead>
+								<tr>
+									<th>Lorem</th>
+									<th>Ipsum</th>
+									<th>Consectetur</th>
+									<th>Eaque perferendis</th>
+									<th>Lorem</th>
+									<th>Ipsum</th>
+									<th>Consectetur</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+									<td>Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem.</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque perferendis pariatur recusandae?</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+									<td>Ratione dolores ex, excepturi nihil quam. Officiis ipsum quidem repellendus quaerat ea, ullam dolorem.</td>
+									<td>Ipsam iure molestias excepturi nihil quam. Officiis ipsum quidem repellendus.</td>
+									<td>Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem.</td>
+								</tr>
+								<tr>
+									<td>Pariatur ratione dolores ex, quaerat ea, ullam dolorem excepturi nihil quam. Officiis ipsum quidem repellendus.</td>
+									<td>Consectetur adipisicing elit. Animi ratione dolores ex, quaerat ea, ullam dolorem, ipsam iure molestias.</td>
+									<td>Excepturi nihil quam ipsum quidem repellendus quaerat ea, ullam dolorem.</td>
+									<td>Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem.</td>
+									<td>Ipsam iure molestias excepturi nihil quam. Officiis ipsum quidem repellendus.</td>
+									<td>Eaque perferendis pariatur recusandae? Animi ratione dolores ex, quaerat ea, ullam dolorem.</td>
+									<td>Lorem ipsum dolor sit amenimi ratione dolores ex, quaerat ea, ullam dolorem, ipsam iure molestias.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">.topiclist</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>&lt;ul class="topiclist">
+								&lt;li>
+									&lt;a href="klima/">Klima&lt;/a>
+								&lt;/li>
+								&lt;li>
+									&lt;a href="">Forurensing&lt;/a>
+								&lt;/li>
+								&lt;li>
+									&lt;a href="">Planter&lt;/a>
+								&lt;/li>
+								&lt;li>
+									&lt;a href="">Friluftsliv&lt;/a>
+								&lt;/li>
+								&lt;li>
+									&lt;a href="">Miljøvennlig transport&lt;/a>
+								&lt;/li>
+								&lt;li>
+									&lt;a href="">Hav- og kystmiljø&lt;/a>
+								&lt;/li>
+							&lt;/ul></code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						{{#molecule-topiclist '{"links": [{"href": "/no/tema/arbeidsliv/arbeidsmarked-og-sysselsetting/id935/", "title": "Arbeidsmarked og sysselsetting"},{"href": "/no/tema/utenrikssaker/id919/", "title": "Utenrikssaker"},{"href": "/no/tema/helse-og-omsorg/id917/", "title": "Helse og omsorg"},{"href": "/no/tema/kommuner-og-regioner/kommuneokonomi/id537966/", "title": "Kommuneøkonomi"},{"href": "/no/tema/pensjon-trygd-og-sosiale-tjenester/id942/", "title": "Pensjon, trygd og sosiale tjenester"}]}' }}{{/molecule-topiclist}}
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">.link-list</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;ul class="link-list">
+									&lt;li>
+										&lt;a href="/no/aktuelt/oljeprisen-er-viktig/id731500/">Oljeprisen er viktig&lt;/a>
+									&lt;/li>
+									&lt;li>
+										&lt;a href="/no/aktuelt/arbeid-trygger-velferden/id714178/">Arbeid trygger velferden&lt;/a>
+									&lt;/li>
+									...
+								&lt;/ul>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						{{#molecule-link-list '{"links": [{"href": "/no/aktuelt/oljeprisen-er-viktig/id731500/", "title": "Oljeprisen er viktig"},{"href": "/no/aktuelt/arbeid-trygger-velferden/id714178/", "title": "Arbeid trygger velferden"},{"href": "/no/dokumentarkiv/stoltenberg-ii/fin/lyd-og-bilde/2013/perspektivmeldingen-6---hva-er-norges-na/id713870/", "title": "Video: Hva er Norges nasjonalformue?"},{"href": "/no/tema/okonomi-og-budsjett/norsk_okonomi/bruk-av-oljepenger-/langsiktige-utfordringer-som-folge-av-en/id450473/", "title": "Langsiktige utfordringer som følge av en aldrende befolkning"}]}' }}{{/molecule-link-list}}
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">.useful-linklist-new</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;ul class="useful-linklist-new grid">
+									&lt;li>
+										&lt;a href="/no/aktuelt/offisielt-fra-statsrad/offisielt-fra-statsrad1/id30297/">
+											&lt;span class="text">
+												&lt;b>Offisielt frå statsrådet&lt;/b>
+												&lt;small>&lt;/small>
+											&lt;/span>
+										&lt;/a>
+									&lt;/li>
+									&lt;li>
+										&lt;a href="/no/tema/okonomi-og-budsjett/statsbudsjettet/id1437/">
+											&lt;span class="text">
+												&lt;b>Statsbudsjettet&lt;/b>
+												&lt;small>&lt;/small>
+											&lt;/span>
+										&lt;/a>
+									&lt;/li>
+									...
+								&lt;/ul>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<div class="content-row">
+							<div class="content-useful-links content-col-3">
+								{{#molecule-useful-linklist-new '{"links": [{"href": "/no/aktuelt/offisielt-fra-statsrad/offisielt-fra-statsrad1/id30297/", "title": "Offisielt frå statsrådet"},{"href": "/no/tema/okonomi-og-budsjett/statsbudsjettet/id1437/", "title": "Statsbudsjettet"},{"href": "/no/dokument/hoyringar/id1763/", "title": "Høyringar"},{"href": "https://depkatalog.no/", "title": "Finn ansatte"},{"href": "/no/dokumenter/lonnstabeller/id438643/", "title": "Lønnstabellene"},{"href": "/no/tema/arbeidsliv/Statlig-arbeidsgiverpolitikk/statens_reiseregulativ/id965/", "title": "Statens reiseregulativ"}]}' }}{{/molecule-useful-linklist-new}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="section-organisms" class="sg-section">
+			<div class="content-row header-row">
+				<div class="content-col-2">
+					<h2 class="sg-section-h1">Organisms</h2>
+				</div>
+				<div class="content-col-1 t-right">
+					<button type="button" class="btn btn-no-icon btn-action btn-toggle-backgrounds" data-toggle-backgrounds>Toggle preview background: <span>grid</span></button>
+				</div>
+			</div>
+
+			<div class="content-row">
+				<h3 class="sg-section-h2">Global tools menu</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;nav class="hygieneMenu" aria-labelledby="hygiene-menu-label" data-hygiene-menu>
+									&lt;h2 id="hygiene-menu-label" class="nav-title">Globale verktøy&lt;/h2>
+									&lt;ul>
+										&lt;li class="fontsize">
+											&lt;button type="button" id="fontsize_note_label" aria-controls="fontsize_note" aria-expanded="false" data-fontsize-btn>Skriftst&#248;rrelse&lt;/button>
+
+											&lt;div tabindex="-1" id="fontsize_note" aria-labelledby="fontsize_note_label" data-fontsize-note>
+												&lt;p>For &#229; endre tekstst&#248;rrelsen, hold Ctrl-tasten nede (Cmd-tasten p&#229; Mac) og trykk p&#229; + for &#229; forst&#248;rre eller - for &#229; forminske.&lt;/p>
+											&lt;/div>
+										&lt;/li>
+
+										&lt;li class="language">
+											&lt;button
+												type="button"
+												id="languageSelectorTrigger"
+												lang="no"
+												data-toggle-language-selector=""
+												aria-expanded="false"
+												aria-controls="languageSelector"
+												class="language-selector-trigger flag nob"
+											>&lt;span>Norsk&lt;/span>&lt;/button>
+											&lt;ul
+												id="languageSelector"
+												class="custom-language-selector"
+												tabindex="-1"
+												aria-labelledby="languageSelectorTrigger"
+												data-language-selector=""
+											>
+												&lt;li class="disabled">
+													&lt;span class="flag nob" lang="no">Viser denne siden på norsk&lt;/span>
+												&lt;/li>
+												&lt;li>
+													&lt;a href="/se/id4/" class="flag sme" lang="se-NO">Čájet dán siiddu sámegillii&lt;/a>
+												&lt;/li>
+												&lt;li class="last-in-group">
+													&lt;a href="/en/id4/" class="flag eng" lang="en-GB">Show this page in English&lt;/a>
+												&lt;/li>
+												&lt;li>
+													&lt;a href="/no/id4/" class="flag nob" lang="no">Norsk forside&lt;/a>
+												&lt;/li>
+												&lt;li>
+													&lt;a href="/se/id4/" class="flag sme" lang="se-NO">Sámegiel álgosiidui&lt;/a>
+												&lt;/li>
+												&lt;li>
+													&lt;a href="/en/id4/" class="flag eng" lang="en-GB">English home page&lt;/a>
+												&lt;/li>
+											&lt;/ul>
+										&lt;/li>
+								&lt;/nav>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid" data-pattern-preview>
+						<nav class="hygieneMenu" aria-labelledby="hygiene-menu-label" data-hygiene-menu>
+							<h2 id="hygiene-menu-label" class="nav-title">Globale verktøy</h2>
+							<ul>
+								<li class="fontsize">
+									<button type="button" id="fontsize_note_label" aria-controls="fontsize_note" aria-expanded="false" data-fontsize-btn>Skriftst&#248;rrelse</button>
+
+									<div tabindex="-1" id="fontsize_note" aria-labelledby="fontsize_note_label" data-fontsize-note>
+										<p>For &#229; endre tekstst&#248;rrelsen, hold Ctrl-tasten nede (Cmd-tasten p&#229; Mac) og trykk p&#229; + for &#229; forst&#248;rre eller - for &#229; forminske.</p>
+									</div>
+								</li>
+
+								<li class="language">
+									<button
+										type="button"
+										id="languageSelectorTrigger"
+										lang="no"
+										data-toggle-language-selector=""
+										aria-expanded="false"
+										aria-controls="languageSelector"
+										class="language-selector-trigger flag nob"
+									><span>Norsk</span></button>
+									<ul
+										id="languageSelector"
+										class="custom-language-selector"
+										tabindex="-1"
+										aria-labelledby="languageSelectorTrigger"
+										data-language-selector=""
+									>
+										<li class="disabled">
+											<span class="flag nob" lang="no">Viser denne siden på norsk</span>
+										</li>
+										<li>
+											<a href="/se/id4/" class="flag sme" lang="se-NO">Čájet dán siiddu sámegillii</a>
+										</li>
+										<li class="last-in-group">
+											<a href="/en/id4/" class="flag eng" lang="en-GB">Show this page in English</a>
+										</li>
+										<li>
+											<a href="/no/id4/" class="flag nob" lang="no">Norsk forside</a>
+										</li>
+										<li>
+											<a href="/se/id4/" class="flag sme" lang="se-NO">Sámegiel álgosiidui</a>
+										</li>
+										<li>
+											<a href="/en/id4/" class="flag eng" lang="en-GB">English home page</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Main menu with mega-dropdowns</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;nav class="megaMenu" role="navigation" aria-labelledby="mega-menu-label">
+									&lt;h2 id="mega-menu-label" class="nav-title">Hovedmeny&lt;/h2>
+
+									&lt;ul>
+										&lt;li class="megaMenuItem">
+											&lt;a href="tema.html" class="primaryMenuItem hasDropdown" id="megamenupanel_tema_label" role="button" aria-controls="megamenupanel_tema">
+												Tema
+											&lt;/a>
+
+											&lt;div class="megamenupanel_listing" id="megamenupanel_tema" aria-labelledby="megamenupanel_tema_label" aria-expanded="false" data-megamenu-target>
+												&lt;div class="megamenuInner">
+													&lt;div class="border-frame">
+														&lt;p class="toSection">&lt;a href="tema.html">Alle tema&lt;/a>&lt;/p>
+
+														&lt;div class="section">
+															&lt;ul class="columnize">
+																&lt;li>&lt;a href="tema.html">Arbeid og velferd&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Bolig og eiendom&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Energi&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Familie og oppvekst&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Forbruker&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Forsvars- og sikkerhetspolitikk&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Helse og omsorg&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Innvandring og inkludering&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Internasjonalt&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Kommuner og distrikter&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Kultur, fritid og livssyn&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Likestilling&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Lov og rett&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Mat, fiskeri og landbruk&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Miljø&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Næringsliv&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Offentlig forvaltning&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Samfunnssikkerhet&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Transport og kommunikasjon&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Urfolk og minoriteter&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Utdanning og forskning&lt;/a>&lt;/li>
+																&lt;li>&lt;a href="tema.html">Økonomi&lt;/a>&lt;/li>
+															&lt;/ul>
+														&lt;/div>
+													&lt;/div>
+
+													&lt;button type="button" class="closeButton" data-close-megamenu>
+														&lt;span class="visuallyhidden">Lukk meny&lt;/span>
+													&lt;/button>
+												&lt;/div>
+											&lt;/div>
+										&lt;/li>
+
+										&lt;li class="megaMenuItem">
+											...
+										&lt;/li>
+										...
+									&lt;/ul>
+								&lt;/nav>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid" data-pattern-preview>
+						<nav class="megaMenu" role="navigation" aria-labelledby="mega-menu-label">
+							<h2 id="mega-menu-label" class="nav-title">Hovedmeny</h2>
+
+							<ul>
+								<li class="megaMenuItem">
+									<a href="tema.html" class="primaryMenuItem hasDropdown" id="megamenupanel_tema_label" role="button" aria-controls="megamenupanel_tema">
+										Tema
+									</a>
+
+									<div class="megamenupanel_listing" id="megamenupanel_tema" aria-labelledby="megamenupanel_tema_label" aria-expanded="false" data-megamenu-target>
+										<div class="megamenuInner">
+											<div class="border-frame">
+												<p class="toSection"><a href="tema.html">Alle tema</a></p>
+
+												<div class="section">
+													<ul class="columnize">
+														<li><a href="tema.html">Arbeid og velferd</a></li>
+														<li><a href="tema.html">Bolig og eiendom</a></li>
+														<li><a href="tema.html">Energi</a></li>
+														<li><a href="tema.html">Familie og oppvekst</a></li>
+														<li><a href="tema.html">Forbruker</a></li>
+														<li><a href="tema.html">Forsvars- og sikkerhetspolitikk</a></li>
+														<li><a href="tema.html">Helse og omsorg</a></li>
+														<li><a href="tema.html">Innvandring og inkludering</a></li>
+														<li><a href="tema.html">Internasjonalt</a></li>
+														<li><a href="tema.html">Kommuner og distrikter</a></li>
+														<li><a href="tema.html">Kultur, fritid og livssyn</a></li>
+														<li><a href="tema.html">Likestilling</a></li>
+														<li><a href="tema.html">Lov og rett</a></li>
+														<li><a href="tema.html">Mat, fiskeri og landbruk</a></li>
+														<li><a href="tema.html">Miljø</a></li>
+														<li><a href="tema.html">Næringsliv</a></li>
+														<li><a href="tema.html">Offentlig forvaltning</a></li>
+														<li><a href="tema.html">Samfunnssikkerhet</a></li>
+														<li><a href="tema.html">Transport og kommunikasjon</a></li>
+														<li><a href="tema.html">Urfolk og minoriteter</a></li>
+														<li><a href="tema.html">Utdanning og forskning</a></li>
+														<li><a href="tema.html">Økonomi</a></li>
+													</ul>
+												</div>
+											</div>
+
+											<button type="button" class="closeButton" data-close-megamenu>
+												<span class="visuallyhidden">Lukk meny</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="megaMenuItem">
+									<a href="dokument.html" class="primaryMenuItem hasDropdown" id="megamenupanel_dokument_label" role="button" aria-controls="megamenupanel_dokument">
+										Dokument
+									</a>
+
+									<div class="megamenupanel_listing" id="megamenupanel_dokument" aria-labelledby="megamenupanel_dokument_label" aria-expanded="false" data-megamenu-target>
+										<div class="megamenuInner">
+											<div class="border-frame">
+												<p class="toSection"><a href="dokument.html">Alle dokument</a></p>
+
+												<div class="section">
+													<ul>
+														<li><a href="">Statsbudsjettet</a></li>
+														<li><a href="dokument.html?hoeringer">Høringer</a></li>
+														<li><a href="dokument.html?proposisjoner">Proposisjoner til Stortinget</a></li>
+														<li><a href="dokument.html?meldinger/">Meldinger til Stortinget</a></li>
+														<li><a href="dokument.html?nou">NOU-er</a></li>
+													</ul>
+
+													<ul>
+														<li><a href="">Brev til Stortinget</a></li>
+														<li><a href="">Anbud</a></li>
+														<li><a href="">Konsesjoner</a></li>
+													</ul>
+
+													<ul>
+														<li><a href="">Lover og regler</a>
+															<ul>
+																<li><a href="">Forskrifter</a></li>
+																<li><a href="">Retningslinjer og juridiske veiledninger</a></li>
+																<li><a href="">Prinsipputtalelser og fortolkninger</a></li>
+																<li><a href="">Reglement</a></li>
+																<li><a href="">Rundskriv</a></li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="megamenu-extra-links">
+												<a href="">Bestilling av publikasjoner</a>
+											</div>
+
+											<button type="button" class="closeButton" data-close-megamenu>
+												<span class="visuallyhidden">Lukk meny</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="megaMenuItem">
+									<a href="aktuelt.html" class="primaryMenuItem hasDropdown" id="megamenupanel_aktuelt_label" role="button" aria-controls="megamenupanel_aktuelt">
+										Aktuelt
+									</a>
+
+									<div class="megamenupanel_listing" id="megamenupanel_aktuelt" aria-labelledby="megamenupanel_aktuelt_label" aria-expanded="false" data-megamenu-target>
+										<div class="megamenuInner">
+											<div class="border-frame">
+												<p class="toSection"><a href="aktuelt.html">Alle aktueltsaker</a></p>
+
+												<div class="section">
+													<ul class="columnize">
+														<li><a href="">Nyheter</a></li>
+														<li><a href="">Taler og ytringer</a></li>
+														<li><a href="">Nett-tv og video</a></li>
+														<li><a href="">Pressesenter</a></li>
+														<li><a href="">Kalender</a></li>
+														<li><a href="">Dialog med Stortinget</a></li>
+														<li><a href="">Offisielt fra statsråd</a></li>
+														<li><a href="">Offentlig elektronisk postjournal</a></li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="megamenu-extra-links">
+												<a href="">Ledige stillinger</a>
+											</div>
+
+											<button type="button" class="closeButton" data-close-megamenu>
+												<span class="visuallyhidden">Lukk meny</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="megaMenuItem">
+									<a href="/prototype/departement/" class="primaryMenuItem hasDropdown" id="megamenupanel_departement_label" role="button" aria-controls="megamenupanel_departement">
+										Departement
+									</a>
+
+									<div class="megamenupanel_departementene" id="megamenupanel_departement" aria-labelledby="megamenupanel_departement_label" aria-expanded="false" data-megamenu-target>
+										<div class="megamenuInner">
+											<div class="border-frame">
+												<p class="toSection"><a href="departementene.html">Departement</a></p>
+
+												<div class="section">
+													<ul>
+														<li>
+															<a href="departement.html" class="dep-title">Statsministerens kontor</a>
+															<a href="departement.html" class="dep-minister">Erna Solberg (H)</a>
+														</li>
+													</ul>
+
+													<ul>
+														<li>
+															<a href="departement.html" class="dep-title">Arbeids- og sosialdepartementet</a>
+															<a href="departement.html" class="dep-minister">Robert Eriksson (FrP)</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Barne-, likestillings- og inkluderingsdepartementet</a>
+															<a href="departement.html" class="dep-minister">Solveig Horne</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Finansdepartementet</a>
+															<a href="departement.html" class="dep-minister">Siv Jensen</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Forsvarsdepartementet</a>
+															<a href="departement.html" class="dep-minister">Ine Eriksen Søreide</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Helse- og omsorgsdepartementet</a>
+															<a href="departement.html" class="dep-minister">Bent Høie</a>
+														</li>
+													</ul>
+
+													<ul>
+														<li>
+															<a href="departement.html" class="dep-title">Justis- og beredskapsdepartementet</a>
+															<a href="departement.html" class="dep-minister">Anders Anundsen</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Kommunal- og moderniseringsdepartementet</a>
+															<a href="departement.html" class="dep-minister">Jan Tore Sanner</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Kulturdepartementet</a>
+															<a href="departement.html" class="dep-minister">Thorhild Widvey</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Kunnskapsdepartementet</a>
+															<a href="departement.html" class="dep-minister">Torbjørn Røe Isaksen</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Klima- og miljøverndepartementet</a>
+															<a href="departement.html" class="dep-minister">Tine Sundtoft</a>
+														</li>
+													</ul>
+
+													<ul>
+														<li>
+															<a href="departement.html" class="dep-title">Landbruks- og matdepartementet</a>
+															<a href="departement.html" class="dep-minister">Sylvi Listhaug</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Nærings- og fiskeridepartementet</a>
+															<a href="departement.html" class="dep-minister">Monica Mæland</a>
+															<a href="departement.html" class="dep-minister">Elisabeth Aspaker</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Olje- og energidepartementet</a>
+															<a href="departement.html" class="dep-minister">Tord Lien</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Samferdselsdepartementet</a>
+															<a href="departement.html" class="dep-minister">Ketil Solvik-Olsen</a>
+														</li>
+														<li>
+															<a href="departement.html" class="dep-title">Utenriksdepartementet</a>
+															<a href="departement.html" class="dep-minister">Børge Brende</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+
+											<button type="button" class="closeButton" data-close-megamenu>
+												<span class="visuallyhidden">Lukk meny</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="megaMenuItem">
+									<a href="/prototype/regjering/" class="primaryMenuItem hasDropdown" id="megamenupanel_regjering_label" role="button" aria-controls="megamenupanel_regjering">
+										Regjering
+									</a>
+
+									<div class="megamenupanel_listing" id="megamenupanel_regjering" aria-labelledby="megamenupanel_regjering_label" aria-expanded="false" data-megamenu-target>
+										<div class="megamenuInner">
+											<div class="border-frame">
+												<p class="toSection"><a href="/prototype/regjering/">Regjering</a></p>
+
+												<div class="section">
+													<ul class="columnize">
+														<li>
+															<a href="article2.html">Regjeringen Solberg</a>
+															<ul>
+																<li>
+																	<a href="/prototype/regjering/regjeringen_solberg/regjeringens_medlemmer.php">Regjeringens medlemmer</a>
+																</li>
+																<li>
+																	<a href="/prototype/regjering/tidligere_regjeringer/">Regjeringens satsingsområder</a>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<a href="">Slik blir Noreg styrt</a>
+															<ul>
+																<li>
+																	<a href="/prototype/regjering/tidligere_regjeringer/">Regjeringen i arbeid</a>
+																</li>
+																<li>
+																	<a href="/prototype/regjering/tidligere_regjeringer/">Kva skjer ved eit regjeringsskifte?</a>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<a href="">Tidligere regjeringer og historie</a>
+															<ul>
+																<li>
+																	<a href="/prototype/regjering/tidligere_regjeringer/norges_regjeringer_siden_1814.php">Norges regjeringer 1814 - </a>
+																</li>
+																<li>
+																	<a href="/prototype/regjering/tidligere_regjeringer/">Norske departementer og embeter 1814 - </a>
+																</li>
+																<li>
+																	<a href="/prototype/regjering/tidligere_regjeringer/">Personregister "Norges regjeringer siden 1814"</a>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<a href="">Historisk arkiv</a>
+															<ul>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</div>
+
+											<button type="button" class="closeButton" data-close-megamenu>
+												<span class="visuallyhidden">Lukk meny</span>
+											</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Search</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="topNavigationSearch">
+									&lt;form id="topNavigationSearchForm" action="//www.regjeringen.no/no/sok/id86008/" method="get" autocomplete="off">
+										&lt;div class="topNavigationSearchWrap">
+											&lt;label for="quickSearch" class="visuallyhidden">Søk&lt;/label>
+											&lt;input
+												type="search"
+												id="quickSearch"
+												placeholder="Skriv inn søkeord"
+												class="quickSearch autocomplete"
+												data-form-id="topNavigationSearchForm"
+												data-search-suggest="1"
+												data-autocomplete-source="https://www.regjeringen.no/api/autosuggestapi/search?q=">
+											&lt;div class="search-suggest">
+												&lt;p class="legend">Utvalgte hurtiglenker&lt;/p>
+												&lt;ul class="search-suggest-list" data-search-suggest-list>&lt;/ul>
+											&lt;/div>
+											&lt;button class="searchSubmit">Søk&lt;/button>
+										&lt;/div>
+									&lt;/form>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid" data-pattern-preview>
+						<div class="topNavigationSearch">
+							<form id="topNavigationSearchForm" action="//www.regjeringen.no/no/sok/id86008/" method="get" autocomplete="off">
+								<div class="topNavigationSearchWrap">
+									<label for="quickSearch" class="visuallyhidden">Søk</label>
+									<input
+										type="search"
+										id="quickSearch"
+										placeholder="Skriv inn søkeord"
+										class="quickSearch autocomplete"
+										data-form-id="topNavigationSearchForm"
+										data-search-suggest="1"
+										data-autocomplete-source="https://www.regjeringen.no/api/autosuggestapi/search?q=">
+									<div class="search-suggest">
+										<p class="legend">Utvalgte hurtiglenker</p>
+										<ul class="search-suggest-list" data-search-suggest-list></ul>
+									</div>
+									<button class="searchSubmit">Søk</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Breadcrumbs</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="breadcrumbsWrapper">
+									&lt;nav class="breadcrumbs">
+										&lt;h2 id="breadcrumbs-label" class="breadcrumbs-label">Du er her:&lt;/h2>
+										&lt;ul aria-labelledby="breadcrumbs-label">
+											&lt;li class="crumbItem">
+												&lt;a href="/nb/id4/" role="button" aria-controls="crumb_1">regjeringen.no&lt;/a>
+
+												&lt;ul id="crumb_1" aria-expanded="false">
+													&lt;li>
+														&lt;a href="/nb/tema/id208/">Tema&lt;/a>
+													&lt;/li>
+													&lt;li>
+														&lt;a href="/nb/dokument/id2000006/">Dokument&lt;/a>
+													&lt;/li>
+													&lt;li>
+														&lt;a href="/nb/aktuelt/id1150/">Aktuelt&lt;/a>
+													&lt;/li>
+													...
+												&lt;/ul>
+											&lt;/li>
+											&lt;li class="crumbItem">
+												&lt;a href="/nb/dep/id933/" role="button" aria-controls="crumb_4">Departementene&lt;/a>
+
+												&lt;ul id="crumb_4" aria-expanded="false">
+													&lt;li>
+														&lt;a href="/nb/dep/smk/id875/">Statsministerens kontor&lt;/a>
+													&lt;/li>
+													&lt;li>
+														&lt;a href="/nb/dep/asd/id165/">Arbeids- og sosialdepartementet&lt;/a>
+													&lt;/li>
+													&lt;li>
+														&lt;a href="/nb/dep/bld/id298/">Barne-, likestillings- og inkluderingsdepartementet&lt;/a>
+													&lt;/li>
+													...
+												&lt;/ul>
+											&lt;/li>
+											&lt;li class="crumbItem">
+												&lt;a href="/nb/dep/kud/id545/" role="button" aria-controls="crumb_933">Kulturdepartementet&lt;/a>
+
+												&lt;ul id="crumb_933" aria-expanded="false">
+													&lt;li>
+														&lt;a href="/nb/dep/kud/dep/id550/">Ansvarsomr&#229;der for Kulturdepartementet&lt;/a>
+													&lt;/li>
+													&lt;li>
+														&lt;a href="/nb/dep/kud/org/id569/">Organisering og ledelse&lt;/a>
+													&lt;/li>
+													...
+												&lt;/ul>
+											&lt;/li>
+											&lt;li>Kontakt&lt;/li>
+										&lt;/ul>
+									&lt;/nav>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid" data-pattern-preview>
+						<div class="breadcrumbsWrapper">
+							<nav class="breadcrumbs">
+								<h2 id="breadcrumbs-label" class="breadcrumbs-label">Du er her:</h2>
+								<ul aria-labelledby="breadcrumbs-label">
+									<li class="crumbItem">
+										<a href="/nb/id4/" role="button" aria-controls="crumb_1">regjeringen.no</a>
+
+										<ul id="crumb_1" aria-expanded="false">
+											<li>
+												<a href="/nb/tema/id208/">Tema</a>
+											</li>
+											<li>
+												<a href="/nb/dokument/id2000006/">Dokument</a>
+											</li>
+											<li>
+												<a href="/nb/aktuelt/id1150/">Aktuelt</a>
+											</li>
+											<li>
+												<a href="/nb/dep/id933/">Departementene</a>
+											</li>
+											<li>
+												<a href="/nb/om_regjeringa/id443314/">Regjeringa</a>
+											</li>
+											<li>
+												<a href="/nb/lyd_bilde/id437495/">Lyd og bilde</a>
+											</li>
+											<li>
+												<a href="/nb/dokumentarkiv/id115322/">Historisk arkiv</a>
+											</li>
+										</ul>
+									</li>
+									<li class="crumbItem">
+										<a href="/nb/dep/id933/" role="button" aria-controls="crumb_4">Departementene</a>
+
+										<ul id="crumb_4" aria-expanded="false">
+											<li>
+												<a href="/nb/dep/smk/id875/">Statsministerens kontor</a>
+											</li>
+											<li>
+												<a href="/nb/dep/asd/id165/">Arbeids- og sosialdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/bld/id298/">Barne-, likestillings- og inkluderingsdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/fin/id216/">Finansdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/fd/id380/">Forsvarsdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/hod/id421/">Helse- og omsorgsdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/jd/id463/">Justis- og beredskapsdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/kld/id668/">Klima- og milj&#248;departementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/kmd/id504/">Kommunal- og moderniseringsdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/kud/id545/">Kulturdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/kd/id586/">Kunnskapsdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/lmd/id627/">Landbruks- og matdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/nfd/id709/">N&#230;rings- og fiskeridepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/oed/id750/">Olje- og energidepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/sd/id791/">Samferdselsdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/ud/id833/">Utenriksdepartementet</a>
+											</li>
+										</ul>
+									</li>
+									<li class="crumbItem">
+
+										<a href="/nb/dep/kud/id545/" role="button" aria-controls="crumb_933">Kulturdepartementet</a>
+
+										<ul id="crumb_933" aria-expanded="false">
+											<li>
+												<a href="/nb/dep/kud/dep/id550/">Ansvarsomr&#229;der for Kulturdepartementet</a>
+											</li>
+											<li>
+												<a href="/nb/dep/kud/org/id569/">Organisering og ledelse</a>
+											</li>
+											<li>
+												<a href="/nb/aktuelt/stillinger/id468689/">Ledige stillinger</a>
+											</li>
+											<li>
+												<a href="/nb/dep/kud/Offentlig-elektronisk-postjournal---OEP/id604935/">Offentlig elektronisk postjournal - OEP</a>
+											</li>
+											<li>
+												<a href="/nb/dep/kud/kontakt/id553/">Kontakt</a>
+											</li>
+										</ul>
+									</li>
+									<li>Kontakt</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Find document</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<div class="filters" id="searchFilters" data-id="filters" tabindex="-1">
+							<ul>
+								<li class="term">
+									<div class="custom-selector documenttype">
+										<label for="Dokumenttype2" data-custom-selector-label="a1">Dokumenttype</label>
+										<select id="Dokumenttype2" data-custom-selector-id="a1">
+											<option value="#Alle" selected="selected" class="group-header">Alle dokumenttyper</option>
+											<option value="#Proposisjoner">Proposisjoner</option>
+											<option value="#Meldinger">Meldinger</option>
+											<option value="#NOU">NOU</option>
+											<option value="#Høringer">Høringer</option>
+										</select>
+									</div>
+								</li>
+
+								<li class="term">
+									<div class="custom-selector theme">
+										<label for="Tema" data-custom-selector-label="a2">Tema</label>
+										<select id="Tema" data-custom-selector-id="a2">
+											<option value="#Alle" selected="selected" class="group-header">Alle tema</option>
+											<option value="#Arbeid og velferd">Arbeid og velferd</option>
+											<option value="#Bolig og eiendom">Bolig og eiendom</option>
+											<option value="#Energi">Energi</option>
+											<option value="#Familie og oppvekst">Familie og oppvekst</option>
+										</select>
+									</div>
+								</li>
+
+								<li class="term">
+									<div class="custom-selector department">
+										<h2 class="label">Departement</h2>
+										<a href="" class="custom-selector-reset" title="Fjern valgte tema">Statsministerens kontor</a>
+									</div>
+								</li>
+
+								<li class="term">
+									<div class="custom-selector time">
+										<label for="Tidsperiode" data-custom-selector-label="a4">Tidsperiode</label>
+										<select id="Tidsperiode" data-custom-selector-id="a4">
+											<option value="#Alle" selected="selected" class="group-header">Alle tidsrom</option>
+											<option value="#2014">2014</option>
+											<option value="#2013">2013</option>
+											<option value="#2012">2012</option>
+											<option value="#2011">2011</option>
+											<option value="#2010">2010</option>
+											<option value="#2009">2009</option>
+											<option value="#2008">2008</option>
+											<option value="#2007">2007</option>
+											<option value="#2006">2006</option>
+											<option value="#2005">2005</option>
+											<option value="#2004">2004</option>
+											<option value="#2003">2003</option>
+											<option value="#2002">2002</option>
+											<option value="#2001">2001</option>
+											<option value="#2000">2000</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="pattern-note" data-pattern-note>
+					</div> -->
+				</div>
+
+				<h3 class="sg-section-h2">Pagination</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<ul class="pagination">
+							<li class="prev">
+								<a>Forrige</a>
+							</li>
+							<li class="current">
+								<a>1</a>
+							</li>
+							<li>
+								<a href="/nb/sok/?term=test&amp;page=2">2</a>
+							</li>
+							<li>
+								<a href="/nb/sok/?term=test&amp;page=3">3</a>
+							</li>
+							<li>
+								<a href="/nb/sok/?term=test&amp;page=4">4</a>
+							</li>
+							<li>
+								<a href="/nb/sok/?term=test&amp;page=5">5</a>
+							</li>
+							<li>
+								<a href="/nb/sok/?term=test&amp;page=6">6</a>
+							</li>
+							<li>
+								<a href="/nb/sok/?term=test&amp;page=7">7</a>
+							</li>
+							<li>
+								<a href="/nb/sok/?term=test&amp;page=8">8</a>
+							</li>
+							<li>
+								<a href="/nb/sok/?term=test&amp;page=9">9</a>
+							</li>
+							<li>
+								<a href="/nb/sok/?term=test&amp;page=10">10</a>
+							</li>
+							<li class="next">
+								<a href="/nb/sok/?term=test&amp;page=2">Neste</a>
+							</li>
+						</ul>
+					</div>
+					<!-- <div class="pattern-note" data-pattern-note>
+					</div> -->
+				</div>
+
+				<h3 class="sg-section-h2">Sharing</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;ul class="sharePrint">
+									&lt;li class="sharing">
+										&lt;label id="sharing_label" for="sharing_toggler" class="sharing-toggle" data-sharing-label="">Del/tips&lt;/label>
+										&lt;input type="checkbox" id="sharing_toggler" class="sharing-toggle-checkbox" data-toggle="[data-sharing-panel]" data-sharing-toggler="" aria-controls="sharing_panel">
+
+										&lt;div id="sharing_panel" class="sharing-panel" data-sharing-panel="" aria-labelledby="sharing_label">
+											&lt;p class="sharing-title">Tips en venn&lt;/p>
+											&lt;ul class="socialmedia_linklist">
+												&lt;li>&lt;a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.regjeringen.no%2Fno%2F_SIDE_" class="Facebook">Facebook&lt;/a>&lt;/li>
+												&lt;li>&lt;a href="https://twitter.com/share?url=https%3A%2F%2Fwww.regjeringen.no%2Fno%2F_SIDE_" class="Twitter">Twitter&lt;/a>&lt;/li>
+												&lt;li>&lt;a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.regjeringen.no%2Fno%2F_SIDE_" class="Linkedin">LinkedIn&lt;/a>&lt;/li>
+												&lt;li>&lt;a href="mailto:?subject=Tips%20fra%20regjeringen.no%3A%20_SIDETITTEL_&amp;body=https%3A%2F%2Fwww.regjeringen.no%2Fno%2F_SIDE_" class="email">Epost&lt;/a>&lt;/li>
+											&lt;/ul>
+											&lt;button title="Lukk" class="closeButton" data-toggle="[data-sharing-panel]" data-set-focus="[data-sharing-toggler]">&lt;/button>
+										&lt;/div>
+									&lt;/li>
+									&lt;li class="print">
+										&lt;button class="print-page" data-print-page="">Skriv ut&lt;/button>
+									&lt;/li>
+								&lt;/ul>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<ul class="sharePrint">
+							<li class="sharing">
+								<label id="sharing_label" for="sharing_toggler" class="sharing-toggle" data-sharing-label="">Del/tips</label>
+								<input type="checkbox" id="sharing_toggler" class="sharing-toggle-checkbox" data-toggle="[data-sharing-panel]" data-sharing-toggler="" aria-controls="sharing_panel">
+
+								<div id="sharing_panel" class="sharing-panel" data-sharing-panel="" aria-labelledby="sharing_label">
+									<p class="sharing-title">Tips en venn</p>
+									<ul class="socialmedia_linklist">
+										<li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.regjeringen.no%2Fno%2F_SIDE_" class="Facebook">Facebook</a></li>
+										<li><a href="https://twitter.com/share?url=https%3A%2F%2Fwww.regjeringen.no%2Fno%2F_SIDE_" class="Twitter">Twitter</a></li>
+										<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.regjeringen.no%2Fno%2F_SIDE_" class="Linkedin">LinkedIn</a></li>
+										<li><a href="mailto:?subject=Tips%20fra%20regjeringen.no%3A%20_SIDETITTEL_&amp;body=https%3A%2F%2Fwww.regjeringen.no%2Fno%2F_SIDE_" class="email">Epost</a></li>
+									</ul>
+									<button title="Lukk" aria-label="Lukk" class="closeButton" data-toggle="[data-sharing-panel]" data-set-focus="[data-sharing-toggler]"></button>
+								</div>
+							</li>
+							<li class="print">
+								<button class="print-page" data-print-page="">Skriv ut</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Global footer</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;footer class="page-footer" role="contentinfo">footer class="page-footer" role="contentinfo">
+									&lt;div class="wrapper">
+										&lt;div class="clearfix">
+											&lt;div class="col">
+												&lt;div class="logo">
+													&lt;a href="/">
+														Regjeringen.no&lt;span>&lt;/span>
+													&lt;/a>
+												&lt;/div>
+											&lt;/div>
+
+											&lt;div class="col">
+												&lt;ul>
+													&lt;li>
+														&lt;h2 class="title">
+															&lt;a href="/nb/Om-nettstedet/strategi-organisering-og-historikk-/id450433/">Om nettstedet&lt;/a>
+														&lt;/h2>
+
+														&lt;ul>
+															&lt;li>
+																&lt;a href="/nb/Om-nettstedet/strategi-organisering-og-historikk-/id450433/">Form&#229;l, organisering og historikk &lt;/a>
+															&lt;/li>
+															&lt;li>
+																&lt;a href="/nb/Om-nettstedet/innholdsstrategi/id2076583/">Innholdsstrategi for regjeringen.no&lt;/a>
+															&lt;/li>
+															&lt;li>
+																&lt;a href="/nb/Om-nettstedet/statistikk/besoksstatistikk-for-2014/id748936/">Bes&#248;ksstatistikk for 2014&lt;/a>
+															&lt;/li>
+															&lt;li>
+																&lt;a href="/nb/Om-nettstedet/tilgjengelighet/id450484/">Tilgjengelighet&lt;/a>
+															&lt;/li>
+															&lt;li>
+																&lt;a href="/nb/Om-nettstedet/personvernpolicy/id650340/">Personvernpolitikk&lt;/a>
+															&lt;/li>
+														&lt;/ul>
+													&lt;/li>
+												&lt;/ul>
+											&lt;/div>
+
+											&lt;div class="col">
+												&lt;p>Departementenes digitaliseringsorganisasjon,&lt;/p>
+												&lt;p>Postboks 8129 Dep, 0032 OSLO&nbsp;&lt;br />Tlf: 22 24 90 90&lt;/p>
+												&lt;p>&lt;span>E-post:&nbsp;&lt;/span>&lt;a href="mailto:redaksjonen@dio.dep.no">redaksjonen@dio.dep.no&lt;/a>&lt;span>&nbsp;&lt;/span>&lt;/p>
+												&lt;p>Ansatte i departementene (ikke FD), SMK, DSS og DIO:&nbsp;&lt;a title="Ansatte i dep. og SMK" href="https://depkatalog.no/">Depkatalog&lt;/a>&lt;/p>
+												&lt;p>Org.nr. 974 761 424&lt;/p>
+											&lt;/div>
+										&lt;/div>
+									&lt;/div>
+								&lt;/footer>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<footer class="page-footer" role="contentinfo">
+							<div class="wrapper">
+								<div class="clearfix">
+									<div class="col">
+										<div class="logo">
+											<a href="/">
+												Regjeringen.no<span></span>
+											</a>
+										</div>
+									</div>
+									<div class="col">
+										<h2 class="title">
+											<a href="/no/Om-nettstedet/id450429/">Om nettstedet</a>
+										</h2>
+										<ul class="link-list ">
+											<li>
+												<a href="/no/Om-nettstedet/strategi-organisering-og-historikk-/id450433/">Formål, organisering og historikk </a>
+											</li>
+											<li>
+												<a href="/no/Om-nettstedet/innholdsstrategi/id2076583/">Innholdsstrategi for regjeringen.no</a>
+											</li>
+											<li>
+												<a href="/no/Om-nettstedet/statistikk/besoksstatistikk-for-2015/id2429701/">Besøksstatistikk for 2015</a>
+											</li>
+											<li>
+												<a href="/no/Om-nettstedet/tilgjengelighet/id450484/">Tilgjengelighet</a>
+											</li>
+											<li>
+												<a href="/no/Om-nettstedet/personvernpolicy/id650340/">Personvernpolitikk</a>
+											</li>
+										</ul>
+									</div>
+									<div class="col">
+										<p>Ansvarlig for <a title="UD forside" href="/no/dep/ud/id833/">Utenriksdepartementets sider:</a></p>
+										<p>Ansvarlig redaktør: <a href="mailto:kommunikasjonsenheten@mfa.no">Frode O. Andersen</a>&nbsp;</p>
+										<p>Nettredaktør: <a title="E-postadresse" href="mailto:johan.toverud.jensen@mfa.no">Johan T. Jensen</a></p>
+										<p>Postadresse: Boks 8114 Dep., 0032 Oslo</p>
+										<p>E-post: <a href="mailto:post@mfa.no">post@mfa.no</a></p>
+										<p>Ansatte i UD: <a title="Ansatte i UD" href="https://depkatalog.no/#?filter=ministry:ud" target="_blank">Depkatalog</a></p>
+										<p>Organisasjonsnummer: 972 417 920</p>
+									</div>
+								</div>
+							</div>
+						</footer>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Factbox</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<div class="factbox">
+							<h3 class="factbox-title">
+								<button type="button" class="factbox-toggler" data-toggle-factbox="#factbox1" aria-controls="factbox1" aria-expanded="false">
+									<span class="factbox-title-text">Title 1</span>
+								</button>
+							</h3>
+							<div id="factbox1" class="factbox-content">
+								<p>Some content to factbox 1 ..</p>
+							</div>
+						</div>
+						<div class="factbox">
+							<h3 class="factbox-title">
+								<button type="button" class="factbox-toggler" data-toggle-factbox="#factbox2" aria-controls="factbox2" aria-expanded="false">
+									<span class="factbox-title-text">Title 2</span>
+								</button>
+							</h3>
+							<div id="factbox2" class="factbox-content">
+								<p>Some content to factbox 2 ..</p>
+							</div>
+						</div>
+						<div class="factbox">
+							<h3 class="factbox-title">
+								<button type="button" class="factbox-toggler" data-toggle-factbox="#factbox3" aria-controls="factbox3" aria-expanded="false">
+									<span class="factbox-pre-title">Pre title (optional)</span>
+									<span class="factbox-title-text">Title 3</span>
+								</button>
+							</h3>
+							<div id="factbox3" class="factbox-content">
+								<p>Some content to factbox 3 ..</p>
+							</div>
+						</div>
+						<div class="factbox">
+							<div class="factbox-static">
+								<h3 class="factbox-title">Tittel 4</h3>
+							</div>
+							<div id="factbox4" class="factbox-content">
+								<p>Some content to factbox 3 ..</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Nett-TV</h3>
+				<div class="pattern">
+					{{!-- <div class="pattern-note" data-pattern-note></div> --}}
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<div class="webBroadcastBlock">
+							<h2>
+								<span class="media-banner">
+									<span class="media-banner-nett-tv">Nett-<span>TV</span></span>
+									<span class="media-banner-live">Direkte nå</span>
+								</span>
+								Pressekonferanse om handlingsplan mot radikalisering og voldeling ekstremisme
+							</h2>
+							<a href="https://regjeringen_live.23video.com/v.ihtml/player.html?source=share&amp;photo%5fid=10522003&amp;autoPlay=0" data-lightbox-opener="nett-tv" data-lightbox-slides="true" data-lightbox-title="Pressekonferanse om handlingsplan mot radikalisering og voldeling ekstremisme" data-lightbox-closetxt="Lukk" data-lightbox-labeltxt="Nett-TV" data-lightbox-label-status="Direkte Nå"><img src="/Static/img/nett-tv.svg" alt="">
+								<p>Se opptaket her</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2">Image carousel</h3>
+				<div class="pattern">
+					<div class="pattern-note" data-pattern-note>
+						<p>The image carousel depends on script <code>carousel.js</code> (jQuery dependent):</p>
+						<pre class="language-markup">
+							<code>
+								&lt;script src="/Static/js/carousel.js">&lt;/script>
+							</code>
+						</pre>
+						<p>The <code>data-carousel-id</code> value must be unique.</p>
+						<p>The <code>data-carousel-wrapper</code> takes values <code>landscape</code> or <code>portrait</code>.</p>
+						<ul>
+							<li>Images sizes for <code>landscape</code> mode: 316px × 177px</li>
+							<li>Images sizes for <code>portrait</code> mode: 165px × 220px</li>
+						</ul>
+						<pre class="language-markup line-numbers">
+							<code>
+								&lt;div class="carousel-wrapper clearfix" data-carousel-wrapper="landscape" data-carousel-id="1">
+									&lt;div class="carousel" data-carousel>
+										&lt;ul class="clearfix">
+											&lt;li data-carousel-item="1">
+												&lt;img src="//placehold.it/316x177" alt="Alternativ bildetekst" data-carousel-image>
+												&lt;div class="info">
+													&lt;h3 class="name">&lt;a href="https://www.regjeringen.no/">Integrering&lt;/a>&lt;/h3>
+													&lt;p class="position">Subtittel&lt;/p>
+													&lt;p class="description">Hovudmålet for integreringspolitikken er at innvandrarar og borna deira skal få bruke ressursane sine og bidra til fellesskapet. Nøklane til integrering i det norske samfunnet ligg i å delta i arbeidslivet og ha gode norskkunnskapar.&lt;/p>
+													&lt;blockquote class="quote">&lt;p>Sitatblokk&lt;/p>&lt;/blockquote>
+												&lt;/div>
+											&lt;/li>
+											&lt;li data-carousel-item="2">
+												&lt;img src="//placehold.it/316x177" alt="Alternativ bildetekst" data-carousel-image>
+												&lt;div class="info">
+													&lt;h3 class="name">&lt;a href="https://www.regjeringen.no/">Stortingsmelding om humaniora&lt;/a>&lt;/h3>
+													&lt;p class="position">&lt;/p>
+													&lt;p class="description">Regjeringen starter nå arbeidet med en egen melding til Stortinget om humanistisk forskning og utdanning og tar sikte på å legge den frem i 2017.&lt;/p>
+													&lt;blockquote class="quote">&lt;p>Sitatblokk&lt;/p>&lt;/blockquote>
+												&lt;/div>
+											&lt;/li>
+											...
+										&lt;/ul>
+
+										&lt;span class="swipe-icon">&lt;/span>
+									&lt;/div>
+
+									&lt;button type="button" class="carousel-prev" title="Forrige" data-carousel-prev>&lt;/button>
+									&lt;button type="button" class="carousel-next" title="Neste" data-carousel-next>&lt;/button>
+
+									&lt;div class="carousel-info clearfix" data-carousel-info aria-live="assertive" aria-relevant="all" aria-atomic="true">
+										&lt;div data-carousel-info-content>&lt;/div>
+										&lt;span class="carousel-info-pointer" data-carousel-info-pointer>&lt;/span>
+									&lt;/div>
+								&lt;/div>
+							</code>
+						</pre>
+					</div>
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						{{#organism-carousel '{
+							"id": "1",
+							"format": "portrait",
+							"items": [
+								{
+									"id": "1",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=165×220&w=165&h=220",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/tema/asylsituasjonen/integrering/id2343461/",
+									"title": "Integrering",
+									"subtitle": "Subtittel",
+									"text": "Hovudmålet for integreringspolitikken er at innvandrarar og borna deira skal få bruke ressursane sine og bidra til fellesskapet. Nøklane til integrering i det norske samfunnet ligg i å delta i arbeidslivet og ha gode norskkunnskapar.",
+									"quote": "Sitatblokk"
+								},
+								{
+									"id": "2",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=165×220&w=165&h=220",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/tema/forskning/artikler/humaniora/id2466135/",
+									"title": "Stortingsmelding om humaniora",
+									"text": "Regjeringen starter nå arbeidet med en egen melding til Stortinget om humanistisk forskning og utdanning og tar sikte på å legge den frem i 2017.",
+									"quote": "Sitatblokk"
+								},
+								{
+									"id": "3",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=165×220&w=165&h=220",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/dokumenter/meld.-st.-25-20152016/id2482952/",
+									"title": "Meld. St. 25 (2015–2016)",
+									"subtitle": "Subtittel",
+									"text": "Stortingsmeldingen gir en bred gjennomgang av utviklingstrekk, status og perspektiver for den innenlandske energiforsyningen. Den legger frem en energipolitikk mot 2030, hvor energiforsyning, klimautfordringer og næringsutvikling ses i sammenheng."
+								},
+								{
+									"id": "4",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=165×220&w=165&h=220",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/tema/samfunnssikkerhet-og-beredskap/innsikt/informasjonssikkerhet/id2340011/",
+									"title": "Informasjonssikkerhet",
+									"subtitle": "Subtittel",
+									"text": "Norge skal være i front med å utvikle og levere digitale tjenester til innbyggere og næringsliv. Et slikt mål hviler også på god informasjonssikkerhet og ivaretagelse av personvernet."
+								},
+								{
+									"id": "5",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=165×220&w=165&h=220",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/tema/svalbard-og-polaromradene/innsiktsartikler-polaromradene/antarktis/id2339657/",
+									"title": "Antarktis",
+									"text": "I Antarktis finnes noen av de siste store urørte naturområdene i verden. Planter, dyr, økosystemer og kulturminner i Antarktis er under stadig større press fra ferdsel, miljøgifter og klimaendringer. Samarbeidet under Antarktistraktaten er avgjørende for å sikre at naturmiljø og kulturminner blir bevart.",
+									"quote": "Sitatblokk"
+								},
+								{
+									"id": "6",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=165×220&w=165&h=220",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/tema/svalbard-og-polaromradene/innsiktsartikler-polaromradene/miljovern-og-miljoutfordringer-i-nordomradene/id2076662/",
+									"title": "Miljøvern og miljø-utfordringer i nord",
+									"text": "Nordområdene har noe av den flotteste naturen Norge kan by på, og et rikt naturmangfold både på land og i havet. Miljøtilstanden er stort sett god, men klimaendringene kan få dramatiske konsekvenser for alt liv i Arktis. Isavhengige arter som isbjørn er spesielt utsatt. Strenge miljøkrav og beskyttelse av sårbare områder skal sørge for at belastningen ikke blir for stor når aktiviteten øker.",
+									"quote": "Sitatblokk"
+								},
+								{
+									"id": "7",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=165×220&w=165&h=220",
+									"alt": "Alternativ bildetekst",
+									"url": "/no/tema/kultur-idrett-og-frivillighet/frivillighet/innsiktsartikler/om-frivillighetspolitikken/id2076537/",
+									"title": "Om frivillighetspolitikken",
+									"subtitle": "Subtittel",
+									"text": "En sterk sivil sektor har en avgjørende betydning for å sikre frihet, mangfold og maktbalanse i samfunnet.",
+									"quote": "Sitatblokk"
+								}
+							]
+						}'}}{{/organism-carousel}}
+
+						{{#organism-carousel '{
+							"id": "2",
+							"format": "landscape",
+							"items": [
+								{
+									"id": "1",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=316×177&w=316&h=177",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/tema/asylsituasjonen/integrering/id2343461/",
+									"title": "Integrering",
+									"subtitle": "Subtittel",
+									"text": "Hovudmålet for integreringspolitikken er at innvandrarar og borna deira skal få bruke ressursane sine og bidra til fellesskapet. Nøklane til integrering i det norske samfunnet ligg i å delta i arbeidslivet og ha gode norskkunnskapar.",
+									"quote": "Sitatblokk"
+								},
+								{
+									"id": "2",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=316×177&w=316&h=177",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/tema/forskning/artikler/humaniora/id2466135/",
+									"title": "Stortingsmelding om humaniora",
+									"text": "Regjeringen starter nå arbeidet med en egen melding til Stortinget om humanistisk forskning og utdanning og tar sikte på å legge den frem i 2017.",
+									"quote": "Sitatblokk"
+								},
+								{
+									"id": "3",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=316×177&w=316&h=177",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/dokumenter/meld.-st.-25-20152016/id2482952/",
+									"title": "Meld. St. 25 (2015–2016)",
+									"subtitle": "Subtittel",
+									"text": "Stortingsmeldingen gir en bred gjennomgang av utviklingstrekk, status og perspektiver for den innenlandske energiforsyningen. Den legger frem en energipolitikk mot 2030, hvor energiforsyning, klimautfordringer og næringsutvikling ses i sammenheng."
+								},
+								{
+									"id": "4",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=316×177&w=316&h=177",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/tema/samfunnssikkerhet-og-beredskap/innsikt/informasjonssikkerhet/id2340011/",
+									"title": "Informasjonssikkerhet",
+									"subtitle": "Subtittel",
+									"text": "Norge skal være i front med å utvikle og levere digitale tjenester til innbyggere og næringsliv. Et slikt mål hviler også på god informasjonssikkerhet og ivaretagelse av personvernet."
+								},
+								{
+									"id": "5",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=316×177&w=316&h=177",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/tema/svalbard-og-polaromradene/innsiktsartikler-polaromradene/antarktis/id2339657/",
+									"title": "Antarktis",
+									"text": "I Antarktis finnes noen av de siste store urørte naturområdene i verden. Planter, dyr, økosystemer og kulturminner i Antarktis er under stadig større press fra ferdsel, miljøgifter og klimaendringer. Samarbeidet under Antarktistraktaten er avgjørende for å sikre at naturmiljø og kulturminner blir bevart.",
+									"quote": "Sitatblokk"
+								},
+								{
+									"id": "6",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=316×177&w=316&h=177",
+									"alt": "Alternativ bildetekst",
+									"url": "https://www.regjeringen.no/no/tema/svalbard-og-polaromradene/innsiktsartikler-polaromradene/miljovern-og-miljoutfordringer-i-nordomradene/id2076662/",
+									"title": "Miljøvern og miljø-utfordringer i nord",
+									"text": "Nordområdene har noe av den flotteste naturen Norge kan by på, og et rikt naturmangfold både på land og i havet. Miljøtilstanden er stort sett god, men klimaendringene kan få dramatiske konsekvenser for alt liv i Arktis. Isavhengige arter som isbjørn er spesielt utsatt. Strenge miljøkrav og beskyttelse av sårbare områder skal sørge for at belastningen ikke blir for stor når aktiviteten øker.",
+									"quote": "Sitatblokk"
+								},
+								{
+									"id": "7",
+									"image": "//placeholdit.imgix.net/~text?txtsize=24&txt=316×177&w=316&h=177",
+									"alt": "Alternativ bildetekst",
+									"url": "/no/tema/kultur-idrett-og-frivillighet/frivillighet/innsiktsartikler/om-frivillighetspolitikken/id2076537/",
+									"title": "Om frivillighetspolitikken",
+									"subtitle": "Subtittel",
+									"text": "En sterk sivil sektor har en avgjørende betydning for å sikre frihet, mangfold og maktbalanse i samfunnet.",
+									"quote": "Sitatblokk"
+								}
+							]
+						}'}}{{/organism-carousel}}
+					</div>
+				</div>
+
+
+				<h3 class="sg-section-h2">Article</h3>
+
+				<h3 class="sg-section-h2">.article-body</h3>
+				<div class="pattern">
+					{{!-- <div class="pattern-note" data-pattern-note></div> --}}
+					<div class="pattern-preview pattern-preview-grid mainContentArea" data-pattern-preview>
+						<div class="article-body">
+							<h2>H2 overskrift</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt rutrum justo eget dignissim. In tincidunt rutrum justo eget dignissim.</p>
+							<h3>H3 overskrift</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt rutrum justo eget dignissim. In tincidunt rutrum justo eget dignissim.</p>
+							<h4>H4 overskrift</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt rutrum justo eget dignissim. In tincidunt rutrum justo eget dignissim.</p>
+							<h5>H5 overskrift</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt rutrum justo eget dignissim. In tincidunt rutrum justo eget dignissim.</p>
+							<ul>
+								<li>Curabitur ut ornare leo</li>
+								<li>Morbi eget risus quis sem venenatis interdum</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt rutrum justo eget dignissim. Curabitur ut ornare leo.</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nostrum eius eum perspiciatis ipsa inventore dolorum consectetur nesciunt sunt magnam qui, eligendi rem molestiae suscipit recusandae necessitatibus veniam praesentium fugiat.</li>
+								<li>Beatae numquam dicta <a href="#">voluptas molestiae incidunt debitis consequatur</a> quibusdam saepe illum est, blanditiis eaque et temporibus fugiat omnis obcaecati molestias error praesentium quia. Ipsum deserunt dolorum odit excepturi libero fugiat.</li>
+								<li>Veritatis iusto quaerat, illum quibusdam quia architecto itaque doloremque, recusandae asperiores porro! Et amet doloribus ipsa, similique necessitatibus natus, illo non dignissimos facilis. Ipsum sit vel error dolorum temporibus labore.</li>
+							</ul>
+							<p>In tincidunt rutrum justo eget dignissim. Curabitur ut ornare leo. Morbi eget risus quis sem venenatis interdum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto vitae fugiat dignissimos enim repellendus recusandae consectetur nobis beatae earum modi vero, maxime consequatur provident esse soluta, quae neque praesentium adipisci.</p>
+							<ol>
+								<li>Curabitur ut ornare leo</li>
+								<li>Morbi eget <a href="#">risus quis sem venenatis</a> interdum</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt rutrum justo eget dignissim. Curabitur ut ornare leo.</li>
+							</ol>
+							<p>In tincidunt rutrum justo eget dignissim. Curabitur ut ornare leo. Morbi eget risus quis sem venenatis interdum</p>
+							<table>
+								<caption>Table caption morbi eget risus quis sem venenatis interdum</caption>
+								<thead>
+									<tr>
+										<th>Curabitur ut ornare</th>
+										<th>In tincidunt rutrum</th>
+										<th>Venenatis interdum</th>
+										<th>Curabitur ut ornare</th>
+										<th>In tincidunt rutrum</th>
+										<th>Curabitur ut ornare</th>
+										<th>In tincidunt rutrum</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Morbi semper ante at sapien placerat, sit amet tempor dolor fringilla.</td>
+										<td>In tincidunt rutrum justo eget dignissim. Curabitur ut ornare leo.</td>
+										<td>Curabitur ut ornare leo.</td>
+										<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+										<td>Morbi semper ante at sapien placerat, sit amet tempor dolor fringilla.</td>
+										<td>In tincidunt rutrum justo eget dignissim. Curabitur ut ornare leo.</td>
+										<td>Morbi semper ante at sapien placerat, sit amet tempor dolor fringilla.</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>Lorem ipsum dolor sit amet, <a href="http://dette.er/en/link/">consectetur adipiscing elit</a>. In tincidunt rutrum justo eget dignissim.</p>
+							<figure>
+								<img src="http://placehold.it/660x371" alt="Alternativ bildetekst">
+								<figcaption>Her er en bildetekst.</figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="section-fonts-and-colors" class="sg-section">
+			<div class="content-row header-row">
+				<div class="content-col-2">
+					<h2 class="sg-section-h1">Fonts &amp; colors</h2>
+				</div>
+
+                <div class="content-col-1 t-right">
+					<button type="button" class="btn btn-no-icon btn-action btn-toggle-backgrounds" data-toggle-backgrounds>Toggle preview background: <span>grid</span></button>
+				</div>
+			</div>
+
+			<div class="content-row">
+				<h3 class="sg-section-h2" id="a-fonts">Fonts</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea-white">
+						<p>Primary font: 'Open Sans', sans-serif;</p>
+						<p><em>Primary font italic: 'Open Sans', sans-serif;</em></p>
+						<p><strong>Primary font bold: 'Open Sans', sans-serif;</strong></p>
+					</div>
+				</div>
+
+				<h3 class="sg-section-h2" id="a-colors">Colors</h3>
+				<div class="pattern">
+					<div class="pattern-preview pattern-preview-grid mainContentArea-white">
+						<div class="sg-color-set">
+                            <div class="sg-color">
+								<div style="background-color: #000000;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-black</div>
+                                    <div class="sg-color__hex">#000000</div>
+                                </div>
+							</div>
+
+                            <div class="sg-color">
+								<div style="background-color: #333333;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-10</div>
+                                    <div class="sg-color__hex">#333333</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #545454;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-20</div>
+                                    <div class="sg-color__hex">#545454</div>
+								</div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #666666;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-30</div>
+                                    <div class="sg-color__hex">#666666</div>
+								</div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #767676;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-35</div>
+                                    <div class="sg-color__hex">#767676</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #ababab;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-40</div>
+                                    <div class="sg-color__hex">#ababab</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #c8c8c8;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-50</div>
+                                    <div class="sg-color__hex">#c8c8c8</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #e0e0e0;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-60</div>
+                                    <div class="sg-color__hex">#e0e0e0</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #ededed;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-70</div>
+                                    <div class="sg-color__hex">#ededed</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #fafafa;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-90</div>
+                                    <div class="sg-color__hex">#fafafa</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #ffffff;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">neutral-white</div>
+                                    <div class="sg-color__hex">#ffffff</div>
+                                </div>
+							</div>
+
+
+						</div>
+
+						<div class="sg-color-set">
+							<div class="sg-color">
+								<div style="background-color: #002e5e;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">blue-10</div>
+                                    <div class="sg-color__hex">#002e5e</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #144696;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">blue-20</div>
+                                    <div class="sg-color__hex">#144696</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #1a5ebd;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">blue-30</div>
+                                    <div class="sg-color__hex">#1a5ebd</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #3867c8;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">blue-40</div>
+                                    <div class="sg-color__hex">#3867c8</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #6eaaf0;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">blue-70</div>
+                                    <div class="sg-color__hex">#6eaaf0</div>
+                                </div>
+							</div>
+							
+						</div>
+
+						<div class="sg-color-set">
+							<div class="sg-color">
+								<div style="background-color: #bc3345;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">red-30</div>
+                                    <div class="sg-color__hex">#bc3345</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #cd4658;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">red-50</div>
+                                    <div class="sg-color__hex">#cd4658</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #ff6875;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">red-70</div>
+                                    <div class="sg-color__hex">#ff6875</div>
+                                </div>
+							</div>
+						</div>
+
+						<div class="sg-color-set">
+							<div class="sg-color">
+								<div style="background-color: #fbd036;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">yellow-40</div>
+                                    <div class="sg-color__hex">#fbd036</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #fce782;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">yellow-70</div>
+                                    <div class="sg-color__hex">#fce782</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #fdfdcb;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">yellow-90</div>
+                                    <div class="sg-color__hex">#fdfdcb</div>
+                                </div>
+							</div>
+						</div>
+
+						<div class="sg-color-set">
+							<div class="sg-color">
+								<div style="background-color: #0f6653;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">green-30</div>
+                                    <div class="sg-color__hex">#0f6653</div>
+                                </div>
+							</div>
+                            <div class="sg-color">
+								<div style="background-color: #13856c;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">green-40</div>
+                                    <div class="sg-color__hex">#13856c</div>
+                                </div>
+							</div>
+						</div>
+
+						<div class="sg-color-set">
+							<div class="sg-color">
+								<div style="background-color: #44638d;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">dust-10</div>
+                                    <div class="sg-color__hex">#44638d</div>
+                                </div>
+							</div>
+
+                            <div class="sg-color">
+								<div style="background-color: #5a6e82;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">dust-40</div>
+                                    <div class="sg-color__hex">#5a6e82</div>
+                                </div>
+							</div>
+						</div>
+
+                        <div class="sg-color-set">
+							<div class="sg-color">
+								<div style="background-color: #e9e4df;"></div>
+								<div class="sg-color-details">
+                                    <div class="sg-color__name">beige-40</div>
+                                    <div class="sg-color__hex">#e9e4df</div>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{{/content}}
+
+	{{#content 'scripts'}}
+		<script src="/Static/js/select-module.js"></script>
+		<script src="/Static/js/lightbox-content.js"></script>
+		<script>
+			$('.pattern-preview img, .pattern-preview table').wrapWideContent({
+				container: $('.pattern-preview'),
+				//threshold: 1.7856,
+				langZoomImage: 'Forstørr bilde',
+				langShowFullTable: 'Vis tabellen i full bredde'
+			});
+		</script>
+		<script src="/Static/js/carousel.js"></script>
+
+		<script src="/Static/js/patternlib.js"></script>
+		<script src="/Static/patternlib/prism/prism.js"></script>
+		<script>
+			Prism.plugins.NormalizeWhitespace.setDefaults({
+				'remove-trailing': true,
+				'remove-indent': true,
+				'left-trim': true,
+				'right-trim': true,
+				'remove-initial-line-feed': true,
+				'tabs-to-spaces': 4,
+				'spaces-to-tabs': 4
+			});
+		</script>
+	{{/content}}
+
+{{/extend}}

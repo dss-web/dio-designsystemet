@@ -1,0 +1,14 @@
+{{#if title}}{{{title}}}{{/if}}
+<div class="tabs">
+	{{#if prefix}}{{{prefix}}}{{/if}}
+	{{#each tabs}}
+		<div class="tab">
+			{{#ifCond type "===" "button"}}
+				<button type="button" class="{{class}}{{#if active}}{{class-active}}{{else}}{{class-passive}}{{/if}}" aria-expanded="false" aria-controls="{{id}}" data-tab-target="{{id}}" data-tabset="{{tabset}}" data-tab="{{id}}">{{text}}</button>
+			{{/ifCond}}
+			{{#ifCond type "===" "link"}}
+				<a href="{{url}}" class="{{class}}{{#if active}}{{class-active}}{{else}}{{class-passive}}{{/if}}" data-tab-target="{{id}}" data-tabset="{{tabset}}" data-tab="{{id}}">{{text}}</a>
+			{{/ifCond}}
+		</div>
+	{{/each}}
+</div>

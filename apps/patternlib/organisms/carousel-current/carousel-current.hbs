@@ -1,0 +1,31 @@
+<div class="carousel-current-wrapper clearfix" data-carousel-wrapper="{{format}}" data-carousel-current-id="{{id}}">
+	<div class="carousel-current" data-carousel>
+		<ul class="clearfix">
+			{{#each items}}
+			<li data-carousel-item="{{id}}">
+				<img src="{{image}}" alt="{{alt}}" data-carousel-image />
+				<div class="info">
+					<h3 class="name"><a href="{{url}}">{{title}}</a>{{#if party}} {{party}}{{/if}}</h3>
+					<p class="position">{{subtitle}}</p>
+					<p class="description">{{{text}}}</p>
+					{{#if quote}}<blockquote class="quote"><p>{{{quote}}}</p></blockquote>{{/if}}
+				</div>
+			</li>
+			{{/each}}
+		</ul>
+
+		<span class="swipe-icon"></span>
+	</div>
+
+	<button type="button" class="carousel-current-prev" title="Forrige" data-carousel-prev>
+		<span class="visuallyhidden">Forrige</span>
+	</button>
+	<button type="button" class="carousel-current-next" title="Neste" data-carousel-next>
+		<span class="visuallyhidden">Neste</span>
+	</button>
+
+	<div class="carousel-current-info clearfix" data-carousel-info>
+		<div data-carousel-info-content aria-live="assertive" aria-relevant="additions" aria-atomic="true"></div>
+		<span class="carousel-info-pointer" data-carousel-info-pointer></span>
+	</div>
+</div>
