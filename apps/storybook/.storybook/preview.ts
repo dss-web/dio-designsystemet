@@ -1,6 +1,7 @@
-import type { Preview } from '@storybook/web-components-vite'
+import type { Preview } from "@storybook/web-components-vite";
 
-import '@dss-web/regjeringen-tokens'
+import "./tailwind.css";
+import "@dss-web/regjeringen-tokens";
 
 const preview: Preview = {
   parameters: {
@@ -11,9 +12,9 @@ const preview: Preview = {
       },
     },
     a11y: {
-      test: 'todo',
+      test: "todo",
     },
   },
-}
+};
 
-export default preview
+export default preview;

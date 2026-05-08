@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/web-components-vite'
+import tailwindcss from '@tailwindcss/vite'
 import { mergeConfig } from 'vite'
 
 const config: StorybookConfig = {
@@ -13,6 +14,7 @@ const config: StorybookConfig = {
   framework: '@storybook/web-components-vite',
   async viteFinal(config) {
     return mergeConfig(config, {
+      plugins: [tailwindcss()],
       server: {
         fs: {
           allow: ['../..'],
