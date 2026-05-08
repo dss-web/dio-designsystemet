@@ -1,0 +1,734 @@
+<header data-testid="dio-header">
+    <nav class="hygieneMenu max-w-270 mx-auto px-4" aria-label="Globale verktøy" data-hygiene-menu="">
+        <span data-hygiene-menu-large-sceen-anchor=""></span>
+        <ul class="flex items-center gap-2 justify-end" data-size="sm">
+            <li class="fontsize">
+                <button class="ds-button" data-variant="tertiary" type="button"
+                    data-tooltip="For å endre tekststørrelsen, hold Ctrl-tasten nede (Cmd-tasten på Mac) og trykk på + for å forstørre eller - for å forminske."
+                    data-placement="bottom" data-autoplacement="true">
+                    Skriftstørrelse
+                </button>
+            </li>
+            <li class="language" data-nav="lang_selector">
+                <button class="ds-button" data-variant="tertiary" type="button" popovertarget="dropdown">
+                    Norsk
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.96967 9.46967C6.26256 9.17678 6.73744 9.17678 7.03033 9.46967L12 14.4393L16.9697 9.46967C17.2626 9.17678 17.7374 9.17678 18.0303 9.46967C18.3232 9.76256 18.3232 10.2374 18.0303 10.5303L12.5303 16.0303C12.2374 16.3232 11.7626 16.3232 11.4697 16.0303L5.96967 10.5303C5.67678 10.2374 5.67678 9.76256 5.96967 9.46967Z"
+                            fill="currentColor" />
+                    </svg>
+
+                </button>
+                <div class="ds-popover ds-dropdown" id="dropdown" popover="manual" data-placement="bottom-end"
+                    data-variant="default">
+                    <ul>
+                        <li>
+                            <a class="ds-button" type="button" data-variant="tertiary" href="/en/id4/" lang="en-GB">
+                                Show this page in English
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ds-button" type="button" data-variant="tertiary" href="/se/id4/" lang="se-NO">
+                                Čájet dán siiddu sámegillii
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="bg-(--ds-color-regjeringsbla-base-default) py-3">
+        <div class="flex items-center justify-between gap-2 max-w-270 mx-auto px-4">
+        <a href="/no/id4/" class="flex items-center gap-7 text-white">
+            <img src="/images/love.svg" alt="Regjeringen.no" width="48" height="48" class="w-12 h-12" />
+            <span class="h-15 w-px bg-white"></span>
+            <span class="ds-heading" data-size="md">Regjeringen.no</span>
+        </a>
+
+        <div class="block md:hidden">
+            <button type="button" class="ds-button " data-variant="tertiary" data-toggle-menu="" aria-expanded="false">
+                Meny
+            </button>
+
+            <button type="button" class="ds-button" data-variant="tertiary" data-toggle-search="" aria-expanded="false">
+                Søk
+            </button>
+        </div>
+
+        <form action="/no/sok/id86008/" autocomplete="off" id="topNavigationSearchForm" method="get" class="ds-search max-w-125"
+            data-size="sm">
+            <input type="text" name="term" placeholder="Søk" class="ds-input quickSearch autocomplete" id="quickSearch"
+                role="combobox" data-form-id="topNavigationSearchForm" data-search-suggest="1"
+                data-autocomplete-source="/no/api/autosuggestapi/search/?q=" data-autocomplete-enabled="true"
+                aria-expanded="false" aria-owns="topnav-search-suggest" aria-autocomplete="list" autocomplete="off"
+                enterkeyhint="search" aria-label="Søk" />
+            <button class="ds-button" data-icon="true" data-variant="tertiary" type="reset" aria-label="Tøm"></button>
+            <button class="ds-button" data-variant="primary" type="submit">
+                Søk
+            </button>
+        </form>
+        </div>
+    </div>
+    <!--
+    <div class="mobileMenuContainer">
+        <div class="mobileMenuWrapper">
+            <div class="mobileMenuWrapperInner">
+                <div class="topNavigationSearch">
+                    <form action="/no/sok/id86008/" autocomplete="off" id="topNavigationSearchForm" method="get"
+                        class="ds-search" data-size="sm">
+                        <input type="text" name="term" placeholder="Søk" class="ds-input quickSearch autocomplete"
+                            id="quickSearch" role="combobox" data-form-id="topNavigationSearchForm"
+                            data-search-suggest="1" data-autocomplete-source="/no/api/autosuggestapi/search/?q="
+                            data-autocomplete-enabled="true" aria-expanded="false" aria-owns="topnav-search-suggest"
+                            aria-autocomplete="list" autocomplete="off" enterkeyhint="search" aria-label="Søk" />
+                        <button class="ds-button" data-icon="true" data-variant="tertiary" type="reset"
+                            aria-label="Tøm"></button>
+                        <button class="ds-button" data-variant="primary" type="submit">
+                            Søk
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <span data-hygiene-menu-small-sceen-anchor=""></span>
+
+            <nav class="megaMenu" aria-label="Hovedmeny">
+                <ul>
+                    <li class="megaMenuItem">
+                        <a href="/no/tema/id208/" class="primaryMenuItem  hasDropdown" id="megamenupanel_0_label"
+                            role="button" aria-controls="megamenupanel_0" aria-expanded="false">
+                            Tema
+                        </a>
+
+                        <div class="megamenupanel_listing" id="megamenupanel_0" tabindex="-1" data-megamenu-target="">
+                            <div class="megamenuInner" data-nav="megamenu">
+                                <div class="border-frame">
+                                    <p class="toSection">
+                                        <a href="/no/tema/id208/">Finn tema</a>
+                                    </p>
+                                    <div class="section">
+                                        <ul class="columnize">
+                                            <li>
+                                                <a href="/no/tema/antikorrupsjon/id3146748/">Antikorrupsjon</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/arbeidsliv/id210/">Arbeidsliv</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/fns-barekraftsmal/id2590133/">Bærekraftsmålene</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/energi/id212/">Energi</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/europapolitikk/id1151/">Europa</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/familie-og-barn/id213/">Familie og barn</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/forbruker/id214/">Forbruker</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/forskning/id1427/">Forskning</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/forsvar/id215/">Forsvar</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/hav/id2603523/">Hav</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/helse-og-omsorg/id917/">Helse og omsorg</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/innvandring-og-integrering/id918/">Innvandring og
+                                                    integrering</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/klima-og-miljo/id925/">Klima og miljø</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/kommuner-og-regioner/id921/">Kommuner og regioner</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/kultur-idrett-og-frivillighet/id920/">Kultur, idrett
+                                                    og frivillighet</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/likestilling-og-mangfold/id922/">Likestilling og
+                                                    mangfold</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/lov-og-rett/id923/">Lov og rett</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/mat-fiske-og-landbruk/id924/">Mat, fiske og
+                                                    landbruk</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/nordomradene/id1154/">Nordområdene</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/naringsliv/id926/">Næringsliv</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/pensjon-trygd-og-sosiale-tjenester/id942/">Pensjon,
+                                                    trygd og sosiale tjenester</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/plan-bygg-og-eiendom/id211/">Plan, bygg og eiendom</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/samfunnssikkerhet-og-beredskap/id1120/">Samfunnssikkerhet
+                                                    og beredskap</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/statlig-forvaltning/id927/">Statlig forvaltning</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/svalbard-og-polaromradene/id1324/">Svalbard og
+                                                    polarområdene</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/transport-og-kommunikasjon/id928/">Transport og
+                                                    kommunikasjon</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/tro-og-livssyn/id1147/">Tro og livssyn</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/ukraina/id2905202/">Ukraina</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/urfolk-og-minoriteter/id929/">Urfolk og
+                                                    minoriteter</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/utdanning/id930/">Utdanning</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/utenrikssaker/id919/">Utenrikssaker</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/valg-og-demokrati/id537969/">Valg og demokrati</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/ytringsfrihet/id3063988/">Ytringsfrihet</a>
+                                            </li>
+                                            <li>
+                                                <a href="/no/tema/okonomi-og-budsjett/id931/">Økonomi og budsjett</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <button type="button" class="closeButton" data-close-megamenu="">
+                                        <span class="visuallyhidden">Lukk meny</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="megaMenuItem">
+                        <a href="/no/dokument/id2000006/" class="primaryMenuItem  hasDropdown"
+                            id="megamenupanel_1_label" role="button" aria-controls="megamenupanel_1"
+                            aria-expanded="false">
+                            Dokument
+                        </a>
+
+                        <div class="megamenupanel_listing" id="megamenupanel_1" tabindex="-1" data-megamenu-target="">
+                            <div class="megamenuInner" data-nav="megamenu">
+                                <div class="border-frame">
+                                    <p class="toSection">
+                                        <a href="/no/dokument/id2000006/">Finn dokument</a>
+                                    </p>
+                                    <div class="section">
+                                        <div class="section">
+                                            <ul>
+                                                <li>
+                                                    <a href="/no/statsbudsjett/2026/id3118616/">Statsbudsjettet 2026</a>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="/no/statsbudsjett/2026/rnb/id3155542/">Revidert
+                                                                nasjonalbudsjett 2026</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/no/dokument/hoyringar/id1763/">Høyringar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/dokument/innspel/id3015054/">Innspel</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/dokument/prop/id1753/">Proposisjonar til Stortinget</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/dokument/meldst/id1754/">Meldingar til Stortinget</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/dokument/nou-ar/id1767/">NOU-ar</a>
+                                                </li>
+                                            </ul>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="/no/dokument/veiledninger_brosjyrer/id438822/">Veiledninger
+                                                        og brosjyrer</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/dokument/rapporter_planer/id438817/">Rapportar, planar
+                                                        og strategiar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/dokument/tildelingsbrev/id2357472/">Tildelingsbrev,
+                                                        instruksar og årsrapportar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/dokument/brev/id1777/">Brev</a>
+                                                </li>
+                                            </ul>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="/no/dokument/lover_regler/id438754/">Lover og regler</a>
+                                                    <ul>
+                                                        <li>
+                                                            <a
+                                                                href="/no/dokument/lover_regler/lover/id438755/">Lover</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="/no/dokument/lover_regler/forskrifter/id1758/">Forskrifter</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/no/dokument/kongelig-resolusjon/id2076044/">Kongelige
+                                                                resolusjoner</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/no/dokument/lover_regler/retningslinjer/id1759/">Retningslinjer
+                                                                og juridiske veiledninger</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="/no/dokument/lover_regler/tolkningsuttalelser/id441575/">Tolkningsuttalelser</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="/no/dokument/lover_regler/reglement/id1761/">Reglement</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/no/dokument/rundskriv/id1762/">Rundskriv</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="closeButton" data-close-megamenu="">
+                                        <span class="visuallyhidden">Lukk meny</span>
+                                    </button>
+                                </div>
+                                <div class="megamenu-extra-links">
+                                    <a href="/no/dokument/bestilling-av-publikasjoner/id439327/">Bestilling av trykte
+                                        publikasjoner</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="megaMenuItem">
+                        <a href="/no/aktuelt/id1150/" class="primaryMenuItem  hasDropdown" id="megamenupanel_2_label"
+                            role="button" aria-controls="megamenupanel_2" aria-expanded="false">
+                            Aktuelt
+                        </a>
+
+                        <div class="megamenupanel_listing" id="megamenupanel_2" tabindex="-1" data-megamenu-target="">
+                            <div class="megamenuInner" data-nav="megamenu">
+                                <div class="border-frame">
+                                    <p class="toSection">
+                                        <a href="/no/aktuelt/id1150/">Aktuelt</a>
+                                    </p>
+                                    <div class="section">
+                                        <div class="section">
+                                            <ul>
+                                                <li>
+                                                    <a href="/no/aktuelt/nyheter/id2006120/">Nyheter og
+                                                        pressemeldinger</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/aktuelt/nett-tv/id2000007/">Pressekonferanser og
+                                                        nett-tv</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/aktuelt/taler_artikler/id1334/">Taler og innlegg</a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="/no/aktuelt/offisielt-fra-statsrad/offisielt-fra-statsrad1/id30297/">Offisielt
+                                                        frå statsrådet</a>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <a href="/no/aktuelt/kalender/id1330/">Kalender</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/aktuelt/pressekontakter/id445715/">Pressekontakter</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/aktuelt/dialog-med-stortinget/id2343343/">Svar til
+                                                        Stortinget</a>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <a href="/no/aktuelt/einnsyn/id604997/">eInnsyn – elektronisk
+                                                        postjournal</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/no/aktuelt/jobb-i-departementene/id3087969/">Jobb i
+                                                        departementene</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="closeButton" data-close-megamenu="">
+                                        <span class="visuallyhidden">Lukk meny</span>
+                                    </button>
+                                </div>
+                                <div class="megamenu-extra-links">
+                                    <a href="/no/dokumentarkiv/id115322/">Historisk arkiv</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="megaMenuItem">
+                        <a href="/no/dep/id933/" class="primaryMenuItem  hasDropdown" id="megamenupanel_3_label"
+                            role="button" aria-controls="megamenupanel_3" aria-expanded="false">
+                            Departement
+                        </a>
+
+                        <div class="megamenupanel_departementene" id="megamenupanel_3" tabindex="-1"
+                            data-megamenu-target="">
+                            <div class="megamenuInner" data-nav="megamenu">
+                                <div class="border-frame">
+                                    <p class="toSection">
+                                        <a href="/no/dep/id933/">Departementene</a>
+                                    </p>
+                                    <div class="section">
+                                        <ul>
+                                            <li>
+                                                <a href="/no/dep/smk/id875/" class="dep-title">
+                                                    Statsministerens kontor
+                                                </a>
+
+                                                <a href="/no/dep/smk/organisasjonskart/statsminister-jonas-gahr-store/id2877186/"
+                                                    class="dep-minister">
+                                                    Jonas Gahr Støre (Ap)
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="/no/dep/aid/id165/" class="dep-title">
+                                                    Arbeids- og inkluderingsdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/aid/om-arbeids-og-inkluderingsdepartementet/arbeids-og-inkluderingsminister-kjersti-stenseng/id3119047/"
+                                                    class="dep-minister">
+                                                    Kjersti Stenseng (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/bfd/id298/" class="dep-title">
+                                                    Barne- og familiedepartementet
+                                                </a>
+
+                                                <a href="/no/dep/bfd/org/barne-og-familieminister-lene-vagslid/id3085903/"
+                                                    class="dep-minister">
+                                                    Lene Vågslid (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/dfd/id810/" class="dep-title">
+                                                    Digitaliserings- og forvaltningsdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/dfd/org/digitaliserings-og-forvaltningsminister-karianne-oldernes-tung-/id3000277/"
+                                                    class="dep-minister">
+                                                    Karianne Oldernes Tung (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/ed/id750/" class="dep-title">
+                                                    Energidepartementet
+                                                </a>
+
+                                                <a href="/no/dep/ed/org/energiminister-terje-aasland/id2903197/"
+                                                    class="dep-minister">
+                                                    Terje Aasland (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/fin/id216/" class="dep-title">
+                                                    Finansdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/fin/org/finansminister-jens-stoltenberg/id3086196/"
+                                                    class="dep-minister">
+                                                    Jens Stoltenberg (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/fd/id380/" class="dep-title">
+                                                    Forsvarsdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/fd/organisering-og-ledelse/forsvarsminister-tore-o.-sandvik/id3086270/"
+                                                    class="dep-minister">
+                                                    Tore O. Sandvik (Ap)
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="/no/dep/hod/id421/" class="dep-title">
+                                                    Helse- og omsorgsdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/hod/organiseringen-av-helse-og-omsorgsdepartementet/helse-og-omsorgsminister-jan-christian-vestre/id3035364/"
+                                                    class="dep-minister">
+                                                    Jan Christian Vestre (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/jd/id463/" class="dep-title">
+                                                    Justis- og beredskapsdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/jd/org/justis-og-beredskapsminister-astri-aas-hansen/id3086325/"
+                                                    class="dep-minister">
+                                                    Astri Aas-Hansen (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/kld/id668/" class="dep-title">
+                                                    Klima- og miljødepartementet
+                                                </a>
+
+                                                <a href="/no/dep/kld/organisasjon/klima-og-miljominister-andreas-bjelland-eriksen/id3000230/"
+                                                    class="dep-minister">
+                                                    Andreas Bjelland Eriksen (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/kdd/id504/" class="dep-title">
+                                                    Kommunal- og distriktsdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/kdd/org/kommunal-og-distriktsminister-bjornar-selnes-skjaran/id3119065/"
+                                                    class="dep-minister">
+                                                    Bjørnar Selnes Skjæran (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/kud/id545/" class="dep-title">
+                                                    Kultur- og likestillingsdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/kud/org/kultur-og-likestillingsminister-lubna-jaffery-lubna-jaffery/id2987187/"
+                                                    class="dep-minister">
+                                                    Lubna Jaffery (Ap)
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="/no/dep/kd/id586/" class="dep-title">
+                                                    Kunnskapsdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/kd/org/kunnskapsminister-kari-nessa-nordtun/id3000181/"
+                                                    class="dep-minister">
+                                                    Kari Nessa Nordtun (Ap)
+                                                </a>
+                                                <a href="/no/dep/kd/org/forsknings-og-hoyere-utdanningsminister-sigrun-gjerlow-aasland/id3086217/"
+                                                    class="dep-minister">
+                                                    Sigrun Aasland (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/lmd/id627/" class="dep-title">
+                                                    Landbruks- og matdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/lmd/organisasjon/landbruks-og-matminister-nils-kristen-sandtroen/id3086277/"
+                                                    class="dep-minister">
+                                                    Nils Kristen Sandtrøen (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/nfd/id709/" class="dep-title">
+                                                    Nærings- og fiskeridepartementet
+                                                </a>
+
+                                                <a href="/no/dep/nfd/org/naringsminister-cecilie-myrseth/id3035377/"
+                                                    class="dep-minister">
+                                                    Cecilie Myrseth (Ap)
+                                                </a>
+                                                <a href="/no/dep/nfd/org/fiskeri-og-havminister-marianne-sivertsen-nass/id3035385/"
+                                                    class="dep-minister">
+                                                    Marianne Sivertsen Næss (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/sd/id791/" class="dep-title">
+                                                    Samferdselsdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/sd/org/samferdselsminister-jon-ivar-nygard/id2877331/"
+                                                    class="dep-minister">
+                                                    Jon-Ivar Nygård (Ap)
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/no/dep/ud/id833/" class="dep-title">
+                                                    Utenriksdepartementet
+                                                </a>
+
+                                                <a href="/no/dep/ud/org/utenriksminister-espen-espen-barth-eide/id3000220/"
+                                                    class="dep-minister">
+                                                    Espen Barth Eide (Ap)
+                                                </a>
+                                                <a href="/no/dep/ud/org/utviklingsminister-asmund-grover-aukrust/id3086307/"
+                                                    class="dep-minister">
+                                                    Åsmund Grøver Aukrust (Ap)
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="closeButton" data-close-megamenu="">
+                                        <span class="visuallyhidden">Lukk meny</span>
+                                    </button>
+                                </div>
+
+                                <div class="megamenu-extra-links">
+                                    <a href="/no/org/etater-virksomheter-og-selskaper/id2520884/">Etater, virksomheter
+                                        og selskaper</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="megaMenuItem">
+                        <a href="/no/om-regjeringa/id443314/" class="primaryMenuItem  hasDropdown"
+                            id="megamenupanel_4_label" role="button" aria-controls="megamenupanel_4"
+                            aria-expanded="false">
+                            Regjering
+                        </a>
+
+                        <div class="megamenupanel_listing" id="megamenupanel_4" tabindex="-1" data-megamenu-target="">
+                            <div class="megamenuInner" data-nav="megamenu">
+                                <div class="border-frame">
+                                    <p class="toSection">
+                                        <a href="/no/om-regjeringa/id443314/">Regjering</a>
+                                    </p>
+                                    <div class="section">
+                                        <ul class="columnize">
+                                            <li>
+                                                <a href="/no/om-regjeringa/noverande/regjeringen-store/id2877247/">Regjeringen
+                                                    Støre</a>
+                                                <ul>
+                                                    <li>
+                                                        <a
+                                                            href="/no/om-regjeringa/noverande/regjeringensmedlemmer/id543170/">Regjeringens
+                                                            medlemmer</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="/no/om-regjeringa/noverande/regjeringens-plan-for-norge/id3142802/">Regjeringens
+                                                            plan for Norge (2025–29)</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/no/om-regjeringa/sru/id2405055/">Statlige styrer, råd og
+                                                    utvalg</a>
+                                                <ul></ul>
+                                            </li>
+                                            <li>
+                                                <a href="/no/om-regjeringa/slik-blir-norge-styrt/id85844/">Slik blir
+                                                    Norge styrt</a>
+                                                <ul>
+                                                    <li>
+                                                        <a
+                                                            href="/no/om-regjeringa/slik-blir-norge-styrt/regjeringen-i-arbeid-2/id2001100/">Regjeringen
+                                                            i arbeid</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="/no/om-regjeringa/slik-blir-norge-styrt/kva-skjer-ved-eit-regjeringsskifte/id270340/">Kva
+                                                            skjer ved eit regjeringsskifte?</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="/no/om-regjeringa/slik-blir-norge-styrt/Regjeringa-i-arbeid/id2564958/">Film
+                                                            om korleis Noreg vert styrt</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="/no/om-regjeringa/slik-blir-norge-styrt/slik-blir-lover-til2/id2565033/">Slik
+                                                            blir lover til</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/no/om-regjeringa/tidligere-regjeringer-og-historie/id85847/">Tidligere
+                                                    regjeringer og historie</a>
+                                                <ul>
+                                                    <li>
+                                                        <a
+                                                            href="/no/om-regjeringa/tidligere-regjeringer-og-historie/sok-i-regjeringer-siden-1814/id2578015/">Søk
+                                                            i regjeringer siden 1814</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="/no/om-regjeringa/tidligere-regjeringer-og-historie/statistikk/id2563489/">Statistikk</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <button type="button" class="closeButton" data-close-megamenu="">
+                                        <span class="visuallyhidden">Lukk meny</span>
+                                    </button>
+                                </div>
+                                <div class="megamenu-extra-links">
+                                    <a href="/no/dokumentarkiv/id115322/">Historisk arkiv</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    -->
+</header>
