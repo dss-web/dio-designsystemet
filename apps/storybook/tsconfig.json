@@ -22,5 +22,10 @@
     "erasableSyntaxOnly": true,
     "skipLibCheck": true
   },
-  "include": [".storybook/**/*", "stories/**/*", "vitest.config.ts", "vitest.shims.d.ts", "stories/typography/Heading.ts", "stories/typography/Paragraph.ts", "../../packages/regjeringen-components/src/organisms/page/Page.ts", "stories/components/Card.ts"]
+  "include": [
+    ".storybook/**/*",
+    "stories/**/*",
+    "vitest.config.ts",
+    "vitest.shims.d.ts"
+  ]
 }

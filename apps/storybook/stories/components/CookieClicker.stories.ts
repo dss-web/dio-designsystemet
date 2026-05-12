@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite'
 import { html } from 'lit'
 
-import '@dss-web/regjeringen-components/register'
+import '@dio/dio-designsystem/register'
 
 interface CookieClickerArgs {
   initialCount: number

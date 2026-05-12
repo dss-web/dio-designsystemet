@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/web-components-vite";
 
 import "./tailwind.css";
-import "@dss-web/regjeringen-tokens";
+import "@dio/dio-designsystem";
 
 const preview: Preview = {
   parameters: {

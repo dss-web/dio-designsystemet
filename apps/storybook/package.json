@@ -9,8 +9,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@dss-web/regjeringen-components": "workspace:*",
-    "@dss-web/regjeringen-tokens": "workspace:*",
+    "@dio/dio-designsystem": "workspace:*",
     "lit": "^3.3.2"
   },
   "devDependencies": {
@@ -20,9 +19,9 @@
     "@storybook/addon-docs": "^10.3.5",
     "@storybook/addon-vitest": "^10.3.5",
     "@storybook/web-components-vite": "^10.3.5",
+    "@tailwindcss/vite": "^4.1.8",
     "@vitest/browser-playwright": "^4.1.5",
     "@vitest/coverage-v8": "^4.1.5",
-    "@tailwindcss/vite": "^4.1.8",
     "playwright": "^1.59.1",
     "storybook": "^10.3.5",
     "tailwindcss": "^4.1.8",

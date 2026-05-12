@@ -1,77 +1,106 @@
 <header data-testid="dio-header">
-    <nav class="hygieneMenu max-w-270 mx-auto px-4" aria-label="Globale verktøy" data-hygiene-menu="">
-        <span data-hygiene-menu-large-sceen-anchor=""></span>
-        <ul class="flex items-center gap-2 justify-end" data-size="sm">
-            <li class="fontsize">
-                <button class="ds-button" data-variant="tertiary" type="button"
-                    data-tooltip="For å endre tekststørrelsen, hold Ctrl-tasten nede (Cmd-tasten på Mac) og trykk på + for å forstørre eller - for å forminske."
-                    data-placement="bottom" data-autoplacement="true">
-                    Skriftstørrelse
-                </button>
+  <nav class="hygieneMenu max-w-270 mx-auto px-4" aria-label="Globale verktøy" data-hygiene-menu="">
+    <span data-hygiene-menu-large-sceen-anchor=""></span>
+    <ul class="flex items-center gap-2 justify-end" data-size="sm">
+      <li class="fontsize">
+        <button
+          class="ds-button"
+          data-variant="tertiary"
+          type="button"
+          data-tooltip="For å endre tekststørrelsen, hold Ctrl-tasten nede (Cmd-tasten på Mac) og trykk på + for å forstørre eller - for å forminske."
+          data-placement="bottom"
+          data-autoplacement="true"
+        >
+          Skriftstørrelse
+        </button>
+      </li>
+      <li class="language" data-nav="lang_selector">
+        <button class="ds-button" data-variant="tertiary" type="button" popovertarget="dropdown">
+          Norsk
+
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.96967 9.46967C6.26256 9.17678 6.73744 9.17678 7.03033 9.46967L12 14.4393L16.9697 9.46967C17.2626 9.17678 17.7374 9.17678 18.0303 9.46967C18.3232 9.76256 18.3232 10.2374 18.0303 10.5303L12.5303 16.0303C12.2374 16.3232 11.7626 16.3232 11.4697 16.0303L5.96967 10.5303C5.67678 10.2374 5.67678 9.76256 5.96967 9.46967Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <div
+          class="ds-popover ds-dropdown"
+          id="dropdown"
+          popover="manual"
+          data-placement="bottom-end"
+          data-variant="default"
+        >
+          <ul>
+            <li>
+              <a class="ds-button" type="button" data-variant="tertiary" href="/en/id4/" lang="en-GB">
+                Show this page in English
+              </a>
             </li>
-            <li class="language" data-nav="lang_selector">
-                <button class="ds-button" data-variant="tertiary" type="button" popovertarget="dropdown">
-                    Norsk
-
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M5.96967 9.46967C6.26256 9.17678 6.73744 9.17678 7.03033 9.46967L12 14.4393L16.9697 9.46967C17.2626 9.17678 17.7374 9.17678 18.0303 9.46967C18.3232 9.76256 18.3232 10.2374 18.0303 10.5303L12.5303 16.0303C12.2374 16.3232 11.7626 16.3232 11.4697 16.0303L5.96967 10.5303C5.67678 10.2374 5.67678 9.76256 5.96967 9.46967Z"
-                            fill="currentColor" />
-                    </svg>
-
-                </button>
-                <div class="ds-popover ds-dropdown" id="dropdown" popover="manual" data-placement="bottom-end"
-                    data-variant="default">
-                    <ul>
-                        <li>
-                            <a class="ds-button" type="button" data-variant="tertiary" href="/en/id4/" lang="en-GB">
-                                Show this page in English
-                            </a>
-                        </li>
-                        <li>
-                            <a class="ds-button" type="button" data-variant="tertiary" href="/se/id4/" lang="se-NO">
-                                Čájet dán siiddu sámegillii
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            <li>
+              <a class="ds-button" type="button" data-variant="tertiary" href="/se/id4/" lang="se-NO">
+                Čájet dán siiddu sámegillii
+              </a>
             </li>
-        </ul>
-    </nav>
-
-    <div class="bg-(--ds-color-regjeringsbla-base-default) py-3">
-        <div class="flex items-center justify-between gap-2 max-w-270 mx-auto px-4">
-        <a href="/no/id4/" class="flex items-center gap-7 text-white">
-            <img src="/images/love.svg" alt="Regjeringen.no" width="48" height="48" class="w-12 h-12" />
-            <span class="h-15 w-px bg-white"></span>
-            <span class="ds-heading" data-size="md">Regjeringen.no</span>
-        </a>
-
-        <div class="block md:hidden">
-            <button type="button" class="ds-button " data-variant="tertiary" data-toggle-menu="" aria-expanded="false">
-                Meny
-            </button>
-
-            <button type="button" class="ds-button" data-variant="tertiary" data-toggle-search="" aria-expanded="false">
-                Søk
-            </button>
+          </ul>
         </div>
+      </li>
+    </ul>
+  </nav>
 
-        <form action="/no/sok/id86008/" autocomplete="off" id="topNavigationSearchForm" method="get" class="ds-search max-w-125"
-            data-size="sm">
-            <input type="text" name="term" placeholder="Søk" class="ds-input quickSearch autocomplete" id="quickSearch"
-                role="combobox" data-form-id="topNavigationSearchForm" data-search-suggest="1"
-                data-autocomplete-source="/no/api/autosuggestapi/search/?q=" data-autocomplete-enabled="true"
-                aria-expanded="false" aria-owns="topnav-search-suggest" aria-autocomplete="list" autocomplete="off"
-                enterkeyhint="search" aria-label="Søk" />
-            <button class="ds-button" data-icon="true" data-variant="tertiary" type="reset" aria-label="Tøm"></button>
-            <button class="ds-button" data-variant="primary" type="submit">
-                Søk
-            </button>
-        </form>
-        </div>
+  <div class="bg-(--ds-color-regjeringsbla-base-default) py-3">
+    <div class="flex items-center justify-between gap-2 max-w-270 mx-auto px-4">
+      <a href="/no/id4/" class="flex items-center gap-7 text-white">
+        <img src="/images/love.svg" alt="Regjeringen.no" width="48" height="48" class="w-12 h-12" />
+        <span class="h-15 w-px bg-white"></span>
+        <span class="ds-heading" data-size="md">Regjeringen.no</span>
+      </a>
+
+      <div class="block md:hidden">
+        <button type="button" class="ds-button" data-variant="tertiary" data-toggle-menu="" aria-expanded="false">
+          Meny
+        </button>
+
+        <button type="button" class="ds-button" data-variant="tertiary" data-toggle-search="" aria-expanded="false">
+          Søk
+        </button>
+      </div>
+
+      <form
+        action="/no/sok/id86008/"
+        autocomplete="off"
+        id="topNavigationSearchForm"
+        method="get"
+        class="ds-search max-w-125"
+        data-size="sm"
+      >
+        <input
+          type="text"
+          name="term"
+          placeholder="Søk"
+          class="ds-input quickSearch autocomplete"
+          id="quickSearch"
+          role="combobox"
+          data-form-id="topNavigationSearchForm"
+          data-search-suggest="1"
+          data-autocomplete-source="/no/api/autosuggestapi/search/?q="
+          data-autocomplete-enabled="true"
+          aria-expanded="false"
+          aria-owns="topnav-search-suggest"
+          aria-autocomplete="list"
+          autocomplete="off"
+          enterkeyhint="search"
+          aria-label="Søk"
+        />
+        <button class="ds-button" data-icon="true" data-variant="tertiary" type="reset" aria-label="Tøm"></button>
+        <button class="ds-button" data-variant="primary" type="submit">Søk</button>
+      </form>
     </div>
-    <!--
+  </div>
+  <!--
     <div class="mobileMenuContainer">
         <div class="mobileMenuWrapper">
             <div class="mobileMenuWrapperInner">

@@ -1,11 +1,13 @@
 {
-  "name": "@dss-web/regjeringen-tokens",
+  "name": "@dio/dio-designsystem",
   "type": "module",
   "version": "0.0.0",
   "private": true,
   "exports": {
     ".": "./src/index.ts",
-    "./icons": "./src/icons.ts"
+    "./components": "./src/components.ts",
+    "./icons": "./src/icons.ts",
+    "./register": "./src/register.ts"
   },
   "scripts": {
     "build-tokens": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.json",
@@ -14,7 +16,8 @@
   "dependencies": {
     "@digdir/designsystemet-css": "^1.13.2",
     "@digdir/designsystemet-web": "^1.13.2",
-    "@navikt/aksel-icons": "^8.10.2"
+    "@navikt/aksel-icons": "^8.10.2",
+    "lit": "^3.3.2"
   },
   "devDependencies": {
     "typescript": "~6.0.2",

@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@10.11.0",
+  "packageManager": "pnpm@10.33.3",
   "scripts": {
     "patternlib": "pnpm --filter @design/patternlib dev",
     "patternlib:build": "pnpm --filter @design/patternlib build",
@@ -11,8 +11,8 @@
     "build-storybook": "pnpm --filter @design/storybook build-storybook",
     "lint": "eslint --fix",
     "test": "pnpm --filter @design/storybook test",
-    "tokens:create": "pnpm --filter @dss-web/regjeringen-tokens create-tokens",
-    "tokens:build": "pnpm --filter @dss-web/regjeringen-tokens build-tokens",
+    "tokens:create": "pnpm --filter @dio/dio-designsystem create-tokens",
+    "tokens:build": "pnpm --filter @dio/dio-designsystem build-tokens",
     "tokens": "pnpm tokens:create && pnpm tokens:build"
   },
   "devDependencies": {
